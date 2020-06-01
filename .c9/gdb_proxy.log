@@ -1,0 +1,837 @@
+
+
+Tue May 26 2020 15:13:21 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./credit..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="2124"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="3"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:209
+
+{"path":"/pset1/credit/credit.c","line":9,"column":4,"text":"credit.c","content":"    int i = 0;","time":1590505803232,"enabled":true,"fullpath":"/home/ubuntu/pset1/credit/credit.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset1/credit/credit.c:10"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400624",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/credit/credit.c:10"}
+SENDING: Content-Length:331
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400624","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"10","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/credit/credit.c:10"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+GDB: =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400624",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset1/credit/credit.c:10"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 1, main () at credit.c:10\n"
+GDB: ~"10\t    int i = 0;\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="1",frame={addr="0x0000000000400624",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10"},thread-id="1",stopped-threads="all",core="15"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x0000000000400624",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[]}]
+8-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 8^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="4195600"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="64"},{name="AMEX",type="_Bool",value="8"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+9-var-update --all-values *
+
+GDB: 9^done,changelist=[]
+10-var-create - * result
+
+GDB: 10^done,name="var1",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+11-var-create - * second
+
+GDB: 11^done,name="var2",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+12-var-create - * first
+
+GDB: 12^done,name="var3",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+13-var-create - * AMEX
+
+GDB: 13^done,name="var4",numchild="0",value="8",type="_Bool",thread-id="1",has_more="0"
+14-var-create - * MASTERCARD
+
+GDB: 14^done,name="var5",numchild="0",value="64",type="_Bool",thread-id="1",has_more="0"
+15-var-create - * VISA
+
+GDB: 15^done,name="var6",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+16-var-create - * uneven
+
+GDB: 16^done,name="var7",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+17-var-create - * even
+
+GDB: 17^done,name="var8",numchild="0",value="4195600",type="int",thread-id="1",has_more="0"
+18-var-create - * i
+
+GDB: 18^done,name="var9",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+19-var-create - * number
+
+GDB: 19^done,name="var10",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:955
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400624","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"10","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var10","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var9","numchild":"0"},{"name":"even","type":"int","value":"4195600","objname":"var8","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var7","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var6","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"64","objname":"var5","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"8","objname":"var4","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var3","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var2","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":4}
+20-exec-continue 
+
+GDB: 20^running
+SENDING: Content-Length:51
+
+{"_seq":"20","state":"running","status":{},"_id":4}
+GDB: *running,thread-id="all"
+
+Child exited with status 0
+
+GDB: ~"[Inferior 1 (process 2124) exited normally]\n"
+
+
+Tue May 26 2020 15:13:38 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./credit..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="2289"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="12"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:218
+
+{"path":"/pset1/credit/credit.c","line":9,"column":4,"text":"credit.c","content":"    int i = 0;","time":1590505803232,"enabled":true,"fullpath":"/home/ubuntu/pset1/credit/credit.c","command":"bp-set","_id":2,"id":"1"}
+4-break-insert "/home/ubuntu/pset1/credit/credit.c:10"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400624",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/credit/credit.c:10"}
+SENDING: Content-Length:331
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400624","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"10","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/credit/credit.c:10"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+GDB: =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400624",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset1/credit/credit.c:10"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 1, main () at credit.c:10\n"
+GDB: ~"10\t    int i = 0;\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="1",frame={addr="0x0000000000400624",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10"},thread-id="1",stopped-threads="all",core="13"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x0000000000400624",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[]}]
+8-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 8^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="4195600"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="64"},{name="AMEX",type="_Bool",value="8"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+9-var-update --all-values *
+
+GDB: 9^done,changelist=[]
+10-var-create - * result
+
+GDB: 10^done,name="var1",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+11-var-create - * second
+
+GDB: 11^done,name="var2",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+12-var-create - * first
+
+GDB: 12^done,name="var3",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+13-var-create - * AMEX
+
+GDB: 13^done,name="var4",numchild="0",value="8",type="_Bool",thread-id="1",has_more="0"
+14-var-create - * MASTERCARD
+
+GDB: 14^done,name="var5",numchild="0",value="64",type="_Bool",thread-id="1",has_more="0"
+15-var-create - * VISA
+
+GDB: 15^done,name="var6",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+16-var-create - * uneven
+
+GDB: 16^done,name="var7",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+17-var-create - * even
+
+GDB: 17^done,name="var8",numchild="0",value="4195600",type="int",thread-id="1",has_more="0"
+18-var-create - * i
+
+GDB: 18^done,name="var9",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+19-var-create - * number
+
+GDB: 19^done,name="var10",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:955
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400624","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"10","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var10","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var9","numchild":"0"},{"name":"even","type":"int","value":"4195600","objname":"var8","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var7","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var6","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"64","objname":"var5","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"8","objname":"var4","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var3","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var2","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":4}
+20-exec-next 
+
+GDB: 20^running
+SENDING: Content-Length:51
+
+{"_seq":"20","state":"running","status":{},"_id":4}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x000000000040062b",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="11"},thread-id="1",stopped-threads="all",core="13"
+21-stack-list-frames 0 50
+
+GDB: 21^done,stack=[frame={level="0",addr="0x000000000040062b",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="11"}]
+22-stack-list-arguments --simple-values 0 50
+
+GDB: 22^done,stack-args=[frame={level="0",args=[]}]
+23-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 23^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="4195600"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="64"},{name="AMEX",type="_Bool",value="8"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+24-var-update --all-values *
+
+GDB: 24^done,changelist=[]
+25-var-create - * result
+
+GDB: 25^done,name="var11",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+26-var-create - * second
+
+GDB: 26^done,name="var12",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+27-var-create - * first
+
+GDB: 27^done,name="var13",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+28-var-create - * AMEX
+
+GDB: 28^done,name="var14",numchild="0",value="8",type="_Bool",thread-id="1",has_more="0"
+29-var-create - * MASTERCARD
+
+GDB: 29^done,name="var15",numchild="0",value="64",type="_Bool",thread-id="1",has_more="0"
+30-var-create - * VISA
+
+GDB: 30^done,name="var16",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+31-var-create - * uneven
+
+GDB: 31^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+32-var-create - * even
+
+GDB: 32^done,name="var18",numchild="0",value="4195600",type="int",thread-id="1",has_more="0"
+33-var-create - * i
+
+GDB: 33^done,name="var19",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+34-var-create - * number
+
+GDB: 34^done,name="var20",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:964
+
+{"thread":"1","frames":[{"level":"0","addr":"0x000000000040062b","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"11","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var20","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var19","numchild":"0"},{"name":"even","type":"int","value":"4195600","objname":"var18","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var17","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var16","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"64","objname":"var15","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"8","objname":"var14","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var13","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var12","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var11","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":5}
+35-exec-next 
+
+GDB: 35^running
+SENDING: Content-Length:51
+
+{"_seq":"35","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000400632",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="12"},thread-id="1",stopped-threads="all",core="13"
+36-stack-list-frames 0 50
+
+GDB: 36^done,stack=[frame={level="0",addr="0x0000000000400632",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="12"}]
+37-stack-list-arguments --simple-values 0 50
+
+GDB: 37^done,stack-args=[frame={level="0",args=[]}]
+38-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 38^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="0"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="64"},{name="AMEX",type="_Bool",value="8"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+39-var-update --all-values *
+
+GDB: 39^done,changelist=[{name="var18",value="0",in_scope="true",type_changed="false",has_more="0"},{name="var8",value="0",in_scope="true",type_changed="false",has_more="0"}]
+40-var-create - * result
+
+GDB: 40^done,name="var21",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+41-var-create - * second
+
+GDB: 41^done,name="var22",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+42-var-create - * first
+
+GDB: 42^done,name="var23",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+43-var-create - * AMEX
+
+GDB: 43^done,name="var24",numchild="0",value="8",type="_Bool",thread-id="1",has_more="0"
+44-var-create - * MASTERCARD
+
+GDB: 44^done,name="var25",numchild="0",value="64",type="_Bool",thread-id="1",has_more="0"
+45-var-create - * VISA
+
+GDB: 45^done,name="var26",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+46-var-create - * uneven
+
+GDB: 46^done,name="var27",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+47-var-create - * even
+
+GDB: 47^done,name="var28",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+48-var-create - * i
+
+GDB: 48^done,name="var29",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+49-var-create - * number
+
+GDB: 49^done,name="var30",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:958
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400632","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"12","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var30","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var29","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var28","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var27","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var26","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"64","objname":"var25","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"8","objname":"var24","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var23","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var22","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var21","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":6}
+50-exec-next 
+
+GDB: 50^running
+SENDING: Content-Length:51
+
+{"_seq":"50","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000400639",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="14"},thread-id="1",stopped-threads="all",core="13"
+51-stack-list-frames 0 50
+
+GDB: 51^done,stack=[frame={level="0",addr="0x0000000000400639",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="14"}]
+52-stack-list-arguments --simple-values 0 50
+
+GDB: 52^done,stack-args=[frame={level="0",args=[]}]
+53-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 53^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="0"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="64"},{name="AMEX",type="_Bool",value="8"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+54-var-update --all-values *
+
+GDB: 54^done,changelist=[]
+55-var-create - * result
+
+GDB: 55^done,name="var31",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+56-var-create - * second
+
+GDB: 56^done,name="var32",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+57-var-create - * first
+
+GDB: 57^done,name="var33",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+58-var-create - * AMEX
+
+GDB: 58^done,name="var34",numchild="0",value="8",type="_Bool",thread-id="1",has_more="0"
+59-var-create - * MASTERCARD
+
+GDB: 59^done,name="var35",numchild="0",value="64",type="_Bool",thread-id="1",has_more="0"
+60-var-create - * VISA
+
+GDB: 60^done,name="var36",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+61-var-create - * uneven
+
+GDB: 61^done,name="var37",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+62-var-create - * even
+
+GDB: 62^done,name="var38",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+63-var-create - * i
+
+GDB: 63^done,name="var39",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+64-var-create - * number
+
+GDB: 64^done,name="var40",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:958
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400639","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"14","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var40","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var39","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var38","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var37","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var36","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"64","objname":"var35","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"8","objname":"var34","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var33","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var32","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var31","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":7}
+65-exec-next 
+
+GDB: 65^running
+SENDING: Content-Length:51
+
+{"_seq":"65","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x000000000040063d",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="15"},thread-id="1",stopped-threads="all",core="13"
+66-stack-list-frames 0 50
+
+GDB: 66^done,stack=[frame={level="0",addr="0x000000000040063d",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="15"}]
+67-stack-list-arguments --simple-values 0 50
+
+GDB: 67^done,stack-args=[frame={level="0",args=[]}]
+68-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 68^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="0"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="64"},{name="AMEX",type="_Bool",value="8"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+69-var-update --all-values *
+
+GDB: 69^done,changelist=[]
+70-var-create - * result
+
+GDB: 70^done,name="var41",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+71-var-create - * second
+
+GDB: 71^done,name="var42",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+72-var-create - * first
+
+GDB: 72^done,name="var43",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+73-var-create - * AMEX
+
+GDB: 73^done,name="var44",numchild="0",value="8",type="_Bool",thread-id="1",has_more="0"
+74-var-create - * MASTERCARD
+
+GDB: 74^done,name="var45",numchild="0",value="64",type="_Bool",thread-id="1",has_more="0"
+75-var-create - * VISA
+
+GDB: 75^done,name="var46",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+76-var-create - * uneven
+
+GDB: 76^done,name="var47",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+77-var-create - * even
+
+GDB: 77^done,name="var48",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+78-var-create - * i
+
+GDB: 78^done,name="var49",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+79-var-create - * number
+
+GDB: 79^done,name="var50",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:958
+
+{"thread":"1","frames":[{"level":"0","addr":"0x000000000040063d","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"15","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var50","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var49","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var48","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var47","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var46","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"64","objname":"var45","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"8","objname":"var44","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var43","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var42","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var41","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":8}
+80-exec-next 
+
+GDB: 80^running
+SENDING: Content-Length:51
+
+{"_seq":"80","state":"running","status":{},"_id":8}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000400641",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="16"},thread-id="1",stopped-threads="all",core="13"
+81-stack-list-frames 0 50
+
+GDB: 81^done,stack=[frame={level="0",addr="0x0000000000400641",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="16"}]
+82-stack-list-arguments --simple-values 0 50
+
+GDB: 82^done,stack-args=[frame={level="0",args=[]}]
+83-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 83^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="0"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="false"},{name="AMEX",type="_Bool",value="8"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+84-var-update --all-values *
+
+GDB: 84^done,changelist=[{name="var45",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var35",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var25",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var15",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var5",value="false",in_scope="true",type_changed="false",has_more="0"}]
+85-var-create - * result
+
+GDB: 85^done,name="var51",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+86-var-create - * second
+
+GDB: 86^done,name="var52",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+87-var-create - * first
+
+GDB: 87^done,name="var53",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+88-var-create - * AMEX
+
+GDB: 88^done,name="var54",numchild="0",value="8",type="_Bool",thread-id="1",has_more="0"
+89-var-create - * MASTERCARD
+
+GDB: 89^done,name="var55",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+90-var-create - * VISA
+
+GDB: 90^done,name="var56",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+91-var-create - * uneven
+
+GDB: 91^done,name="var57",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+92-var-create - * even
+
+GDB: 92^done,name="var58",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+93-var-create - * i
+
+GDB: 93^done,name="var59",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+94-var-create - * number
+
+GDB: 94^done,name="var60",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:961
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400641","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"16","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var60","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var59","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var58","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var57","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var56","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"false","objname":"var55","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"8","objname":"var54","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var53","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var52","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var51","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":9}
+95-exec-next 
+
+GDB: 95^running
+SENDING: Content-Length:51
+
+{"_seq":"95","state":"running","status":{},"_id":9}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000400645",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="19"},thread-id="1",stopped-threads="all",core="13"
+96-stack-list-frames 0 50
+
+GDB: 96^done,stack=[frame={level="0",addr="0x0000000000400645",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="19"}]
+97-stack-list-arguments --simple-values 0 50
+
+GDB: 97^done,stack-args=[frame={level="0",args=[]}]
+98-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 98^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="0"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="false"},{name="AMEX",type="_Bool",value="false"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+99-var-update --all-values *
+
+GDB: 99^done,changelist=[{name="var54",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var44",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var34",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var24",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var14",value="false",in_scope="true",type_changed="false",has_more="0"},{name="var4",value="false",in_scope="true",type_changed="false",has_more="0"}]
+100-var-create - * result
+
+GDB: 100^done,name="var61",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+101-var-create - * second
+
+GDB: 101^done,name="var62",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+102-var-create - * first
+
+GDB: 102^done,name="var63",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+103-var-create - * AMEX
+
+GDB: 103^done,name="var64",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+104-var-create - * MASTERCARD
+
+GDB: 104^done,name="var65",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+105-var-create - * VISA
+
+GDB: 105^done,name="var66",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+106-var-create - * uneven
+
+GDB: 106^done,name="var67",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+107-var-create - * even
+
+GDB: 107^done,name="var68",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+108-var-create - * i
+
+GDB: 108^done,name="var69",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+109-var-create - * number
+
+GDB: 109^done,name="var70",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:965
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400645","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"19","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var70","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var69","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var68","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var67","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var66","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"false","objname":"var65","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"false","objname":"var64","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var63","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var62","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var61","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":10}
+110-exec-next 
+
+GDB: 110^running
+SENDING: Content-Length:53
+
+{"_seq":"110","state":"running","status":{},"_id":10}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x000000000040065d",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="20"},thread-id="1",stopped-threads="all",core="13"
+111-stack-list-frames 0 50
+
+GDB: 111^done,stack=[frame={level="0",addr="0x000000000040065d",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="20"}]
+112-stack-list-arguments --simple-values 0 50
+
+GDB: 112^done,stack-args=[frame={level="0",args=[]}]
+113-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 113^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="0"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="false"},{name="AMEX",type="_Bool",value="false"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+114-var-update --all-values *
+
+GDB: 114^done,changelist=[]
+115-var-create - * result
+
+GDB: 115^done,name="var71",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+116-var-create - * second
+
+GDB: 116^done,name="var72",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+117-var-create - * first
+
+GDB: 117^done,name="var73",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+118-var-create - * AMEX
+
+GDB: 118^done,name="var74",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+119-var-create - * MASTERCARD
+
+GDB: 119^done,name="var75",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+120-var-create - * VISA
+
+GDB: 120^done,name="var76",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+121-var-create - * uneven
+
+GDB: 121^done,name="var77",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+122-var-create - * even
+
+GDB: 122^done,name="var78",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+123-var-create - * i
+
+GDB: 123^done,name="var79",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+124-var-create - * number
+
+GDB: 124^done,name="var80",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:965
+
+{"thread":"1","frames":[{"level":"0","addr":"0x000000000040065d","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"20","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var80","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var79","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var78","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var77","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var76","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"false","objname":"var75","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"false","objname":"var74","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var73","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var72","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var71","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":11}
+125-exec-next 
+
+GDB: 125^running
+SENDING: Content-Length:53
+
+{"_seq":"125","state":"running","status":{},"_id":11}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x000000000040067d",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="23"},thread-id="1",stopped-threads="all",core="13"
+126-stack-list-frames 0 50
+
+GDB: 126^done,stack=[frame={level="0",addr="0x000000000040067d",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="23"}]
+127-stack-list-arguments --simple-values 0 50
+
+GDB: 127^done,stack-args=[frame={level="0",args=[]}]
+128-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 128^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="0"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="false"},{name="AMEX",type="_Bool",value="false"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+129-var-update --all-values *
+
+GDB: 129^done,changelist=[]
+130-var-create - * result
+
+GDB: 130^done,name="var81",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+131-var-create - * second
+
+GDB: 131^done,name="var82",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+132-var-create - * first
+
+GDB: 132^done,name="var83",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+133-var-create - * AMEX
+
+GDB: 133^done,name="var84",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+134-var-create - * MASTERCARD
+
+GDB: 134^done,name="var85",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+135-var-create - * VISA
+
+GDB: 135^done,name="var86",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+136-var-create - * uneven
+
+GDB: 136^done,name="var87",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+137-var-create - * even
+
+GDB: 137^done,name="var88",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+138-var-create - * i
+
+GDB: 138^done,name="var89",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+139-var-create - * number
+
+GDB: 139^done,name="var90",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:965
+
+{"thread":"1","frames":[{"level":"0","addr":"0x000000000040067d","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"23","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var90","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var89","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var88","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var87","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var86","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"false","objname":"var85","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"false","objname":"var84","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var83","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var82","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var81","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":12}
+140-exec-next 
+
+GDB: 140^running
+SENDING: Content-Length:53
+
+{"_seq":"140","state":"running","status":{},"_id":12}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000400687",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="25"},thread-id="1",stopped-threads="all",core="13"
+141-stack-list-frames 0 50
+
+GDB: 141^done,stack=[frame={level="0",addr="0x0000000000400687",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="25"}]
+142-stack-list-arguments --simple-values 0 50
+
+GDB: 142^done,stack-args=[frame={level="0",args=[]}]
+143-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 143^done,locals=[{name="number",type="long",value="5"},{name="i",type="int",value="0"},{name="even",type="int",value="0"},{name="uneven",type="int",value="0"},{name="VISA",type="_Bool",value="false"},{name="MASTERCARD",type="_Bool",value="false"},{name="AMEX",type="_Bool",value="false"},{name="first",type="int",value="0"},{name="second",type="int",value="0"},{name="result",type="int",value="0"}]
+144-var-update --all-values *
+
+GDB: 144^done,changelist=[]
+145-var-create - * result
+
+GDB: 145^done,name="var91",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+146-var-create - * second
+
+GDB: 146^done,name="var92",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+147-var-create - * first
+
+GDB: 147^done,name="var93",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+148-var-create - * AMEX
+
+GDB: 148^done,name="var94",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+149-var-create - * MASTERCARD
+
+GDB: 149^done,name="var95",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+150-var-create - * VISA
+
+GDB: 150^done,name="var96",numchild="0",value="false",type="_Bool",thread-id="1",has_more="0"
+151-var-create - * uneven
+
+GDB: 151^done,name="var97",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+152-var-create - * even
+
+GDB: 152^done,name="var98",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+153-var-create - * i
+
+GDB: 153^done,name="var99",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+154-var-create - * number
+
+GDB: 154^done,name="var100",numchild="0",value="5",type="long",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:966
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400687","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"25","exists":true,"args":[],"locals":[{"name":"number","type":"long","value":"5","objname":"var100","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var99","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var98","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var97","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var96","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"false","objname":"var95","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"false","objname":"var94","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var93","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var92","numchild":"0"},{"name":"result","type":"int","value":"0","objname":"var91","numchild":"0"}]}]}
+GDB: ^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:31
+
+{"command":"reconnect","_id":1}
+SENDING: Content-Length:27
+
+{"_id":1,"state":"stopped"}
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":2}
+155-break-list 
+
+GDB: 155^done,BreakpointTable={nr_rows="1",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="18",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400624",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="10",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset1/credit/credit.c:10"}]}
+SENDING: Content-Length:789
+
+{"_seq":"155","state":"done","status":{"BreakpointTable":{"nr_rows":"1","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"18","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400624","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"10","thread-groups":["i1"],"times":"1","original-location":"/home/ubuntu/pset1/credit/credit.c:10"}]}},"_id":2}
+PLUGIN: Content-Length:28
+
+{"command":"status","_id":3}
+SENDING: Content-Length:27
+
+{"_id":3,"state":"stopped"}
+156-thread-info 
+
+GDB: 156^done,threads=[{id="1",target-id="Thread 2289.2289",name="credit",frame={level="0",addr="0x0000000000400687",func="main",args=[],file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="25"},state="stopped",core="13"}],current-thread-id="1"
+157-stack-list-frames 0 50
+
+GDB: 157^done,stack=[frame={level="0",addr="0x0000000000400687",func="main",file="credit.c",fullname="/home/ubuntu/pset1/credit/credit.c",line="25"}]
+158-stack-list-arguments --simple-values 0 50
+
+GDB: 158^done,stack-args=[frame={level="0",args=[]}]
+159-var-update --all-values *
+
+GDB: 159^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:966
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400687","func":"main","file":"credit.c","fullname":"/home/ubuntu/pset1/credit/credit.c","line":"25","exists":true,"args":[],"locals":[{"name":"result","type":"int","value":"0","objname":"var91","numchild":"0"},{"name":"second","type":"int","value":"0","objname":"var92","numchild":"0"},{"name":"first","type":"int","value":"0","objname":"var93","numchild":"0"},{"name":"AMEX","type":"_Bool","value":"false","objname":"var94","numchild":"0"},{"name":"MASTERCARD","type":"_Bool","value":"false","objname":"var95","numchild":"0"},{"name":"VISA","type":"_Bool","value":"false","objname":"var96","numchild":"0"},{"name":"uneven","type":"int","value":"0","objname":"var97","numchild":"0"},{"name":"even","type":"int","value":"0","objname":"var98","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var99","numchild":"0"},{"name":"number","type":"long","value":"5","objname":"var100","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":4}

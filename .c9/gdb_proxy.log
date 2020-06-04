@@ -835,3 +835,1484 @@ GDB: ^done
 PLUGIN: Content-Length:30
 
 {"command":"continue","_id":4}
+
+
+Wed Jun 03 2020 16:25:04 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from substitution..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="1072"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="9"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:268
+
+{"path":"/pset1/substitution/substitution.c","line":30,"column":16,"text":"substitution.c","content":"                position = text[i] - 'A';","time":1591201389202,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset1/substitution/substitution.c:31"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400742",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="31",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:31"}
+SENDING: Content-Length:361
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400742","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"31","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:31"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+
+Child exited with status 0
+
+
+
+Wed Jun 03 2020 16:25:18 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from substitution..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="1183"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="1"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:277
+
+{"path":"/pset1/substitution/substitution.c","line":30,"column":16,"text":"substitution.c","content":"                position = text[i] - 'A';","time":1591201389202,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":2,"id":"1"}
+4-break-insert "/home/ubuntu/pset1/substitution/substitution.c:31"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400742",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="31",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:31"}
+SENDING: Content-Length:361
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400742","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"31","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:31"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":4}
+SENDING: Content-Length:27
+
+{"_id":4,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: &"27\t../sysdeps/unix/sysv/linux/read.c: No such file or directory.\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="1"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+8-stack-list-locals --thread 1 --frame 4 --simple-values
+
+GDB: 8^done,locals=[{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x400890 <__libc_csu_init> \"AWAVI\\211\\327AUATL\\215%>\\005 \""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+9-stack-list-locals --thread 1 --frame 3 --simple-values
+
+GDB: 9^done,locals=[]
+10-stack-list-locals --thread 1 --frame 2 --simple-values
+
+GDB: 10^done,locals=[{name="ch",type="int",value="<optimized out>"}]
+11-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 11^done,locals=[{name="count",type="__ssize_t",value="<optimized out>"}]
+12-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 12^done,locals=[{name="resultvar",type="unsigned long",value="18446744073709551104"},{name="sc_ret",type="long",value="<optimized out>"}]
+13-var-update --all-values *
+
+GDB: 13^done,changelist=[]
+14-var-create - * position
+
+GDB: 14^error,msg="-var-create: unable to create variable object"
+15-var-create - * encrypted
+
+GDB: 15^error,msg="-var-create: unable to create variable object"
+16-var-create - * result
+
+GDB: 16^done,name="var3",numchild="114",value="[114]",type="char [114]",has_more="0"
+17-var-create - * text
+
+GDB: 17^error,msg="-var-create: unable to create variable object"
+18-var-create - * key
+
+GDB: 18^done,name="var5",numchild="0",value="0",type="__libc_key_t",has_more="0"
+19-var-create - * argv
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * argc
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * ch
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * fp
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * count
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * fp
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * sc_ret
+
+GDB: 25^done,name="var12",numchild="0",value="<optimized out>",type="long",thread-id="1",has_more="0"
+26-var-create - * resultvar
+
+GDB: 26^done,name="var13",numchild="0",value="18446744073709551104",type="unsigned long",thread-id="1",has_more="0"
+27-var-create - * nbytes
+
+GDB: 27^done,name="var14",numchild="0",value="4096",type="size_t",thread-id="1",has_more="0"
+28-var-create - * buf
+
+GDB: 28^done,name="var15",numchild="0",value="0x602260",type="void *",thread-id="1",has_more="0"
+29-var-create - * fd
+
+GDB: 29^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:2364
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"fd","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var15","numchild":"0"},{"name":"nbytes","type":"size_t","value":"4096","objname":"var14","numchild":"0"}],"locals":[{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var13","numchild":"0"},{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var12","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"count","type":"__ssize_t","value":"<optimized out>"}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"ch","type":"int","value":"<optimized out>"}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"argc","type":"int","value":"2"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840}],"locals":[{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"},{"name":"text","type":"char *","value":"0x400890 <__libc_csu_init> \"AWAVI\\211\\327AUATL\\215%>\\005 \"","address":4196496},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"encrypted","type":"char","value":"0 '\\000'"},{"name":"position","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":5}
+30-exec-step 
+
+GDB: 30^running
+SENDING: Content-Length:51
+
+{"_seq":"30","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":6}
+SENDING: Content-Length:27
+
+{"_id":6,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="2"
+31-stack-list-frames 0 50
+
+GDB: 31^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+32-stack-list-arguments --simple-values 0 50
+
+GDB: 32^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+33-var-update --all-values *
+
+GDB: 33^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2612
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var14","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var15","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var16","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var12","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var13","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":7}
+34-exec-next 
+
+GDB: 34^running
+SENDING: Content-Length:51
+
+{"_seq":"34","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":8}
+SENDING: Content-Length:27
+
+{"_id":8,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="2"
+35-stack-list-frames 0 50
+
+GDB: 35^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+36-stack-list-arguments --simple-values 0 50
+
+GDB: 36^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+37-var-update --all-values *
+
+GDB: 37^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2612
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var14","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var15","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var16","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var12","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var13","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":9}
+38-exec-next 
+
+GDB: 38^running
+SENDING: Content-Length:51
+
+{"_seq":"38","state":"running","status":{},"_id":9}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff731a089",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="28"},thread-id="1",stopped-threads="all",core="2"
+39-stack-list-frames 0 50
+
+GDB: 39^done,stack=[frame={level="0",addr="0x00007ffff731a089",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="28"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x00007ffff7297148",func="_IO_new_file_underflow",args=[{name="fp",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}],file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="533"},gdb-result-var="$1",return-value="5",thread-id="1",stopped-threads="all",core="4"
+40-stack-list-frames 0 50
+
+GDB: 40^done,stack=[frame={level="0",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="533"},frame={level="1",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="2",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="3",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",args=[{name="fp",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}],file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="381"},gdb-result-var="$2",return-value="116",thread-id="1",stopped-threads="all",core="4"
+41-stack-list-frames 0 50
+
+GDB: 41^done,stack=[frame={level="0",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="381"},frame={level="1",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="2",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x00007ffff7999f3d",func="get_string",args=[],from="target:/usr/lib/libcs50.so.10"},gdb-result-var="$3",return-value="116",thread-id="1",stopped-threads="all",core="4"
+42-stack-list-frames 0 50
+
+GDB: 42^done,stack=[frame={level="0",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="1",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+43-stack-list-arguments --simple-values 0 50
+
+GDB: 43^done,stack-args=[frame={level="0",args=[]},frame={level="1",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+44-var-update --all-values *
+
+GDB: 44^done,changelist=[{name="var16",in_scope="false",type_changed="false",has_more="0"},{name="var15",in_scope="false",type_changed="false",has_more="0"},{name="var14",in_scope="false",type_changed="false",has_more="0"},{name="var13",in_scope="false",type_changed="false",has_more="0"},{name="var12",in_scope="false",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:1050
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"1","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":10}
+45-exec-next 
+
+GDB: ~"Single stepping until exit from function get_string,\nwhich has no line number information.\n"
+GDB: 45^running
+SENDING: Content-Length:52
+
+{"_seq":"45","state":"running","status":{},"_id":10}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004006ce",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="24"},thread-id="1",stopped-threads="all",core="4"
+46-stack-list-frames 0 50
+
+GDB: 46^done,stack=[frame={level="0",addr="0x00000000004006ce",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="24"}]
+47-stack-list-arguments --simple-values 0 50
+
+GDB: 47^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+48-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 48^done,locals=[{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"test\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+49-var-update --all-values *
+
+GDB: 49^done,changelist=[]
+50-var-create - * position
+
+GDB: 50^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+51-var-create - * encrypted
+
+GDB: 51^done,name="var18",numchild="0",value="0 '\\000'",type="char",thread-id="1",has_more="0"
+52-var-create - * result
+
+GDB: 52^done,name="var19",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+53-var-create - * text
+
+GDB: 53^done,name="var20",numchild="1",value="0x603270 \"test\"",type="char *",thread-id="1",has_more="0"
+54-var-create - * key
+
+GDB: 54^done,name="var21",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+55-var-create - * argv
+
+GDB: 55^done,name="var22",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+56-var-create - * argc
+
+GDB: 56^done,name="var23",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:872
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004006ce","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"24","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var23","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var22","numchild":"1"}],"locals":[{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var21","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"test\"","address":6304368,"objname":"var20","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var19","numchild":"26"},{"name":"encrypted","type":"char","value":"0 '\\000'","objname":"var18","numchild":"0"},{"name":"position","type":"int","value":"0","objname":"var17","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:31
+
+{"command":"continue","_id":11}
+57-exec-continue 
+
+GDB: 57^running
+SENDING: Content-Length:52
+
+{"_seq":"57","state":"running","status":{},"_id":11}
+GDB: *running,thread-id="all"
+
+Child exited with status 0
+
+GDB: ~"[Inferior 1 (process 1183) exited normally]\n"
+
+
+Wed Jun 03 2020 16:27:50 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from substitution..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="1629"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="15"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:268
+
+{"path":"/pset1/substitution/substitution.c","line":30,"column":16,"text":"substitution.c","content":"                position = text[i] - 'A';","time":1591201656615,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset1/substitution/substitution.c:31"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400742",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="31",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:31"}
+SENDING: Content-Length:361
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400742","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"31","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:31"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":4}
+SENDING: Content-Length:27
+
+{"_id":4,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: &"27\t../sysdeps/unix/sysv/linux/read.c: No such file or directory.\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="6"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+8-stack-list-locals --thread 1 --frame 4 --simple-values
+
+GDB: 8^done,locals=[{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x400890 <__libc_csu_init> \"AWAVI\\211\\327AUATL\\215%>\\005 \""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+9-stack-list-locals --thread 1 --frame 3 --simple-values
+
+GDB: 9^done,locals=[]
+10-stack-list-locals --thread 1 --frame 2 --simple-values
+
+GDB: 10^done,locals=[{name="ch",type="int",value="<optimized out>"}]
+11-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 11^done,locals=[{name="count",type="__ssize_t",value="<optimized out>"}]
+12-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 12^done,locals=[{name="resultvar",type="unsigned long",value="18446744073709551104"},{name="sc_ret",type="long",value="<optimized out>"}]
+13-var-update --all-values *
+
+GDB: 13^done,changelist=[]
+14-var-create - * position
+
+GDB: 14^error,msg="-var-create: unable to create variable object"
+15-var-create - * encrypted
+
+GDB: 15^error,msg="-var-create: unable to create variable object"
+16-var-create - * result
+
+GDB: 16^done,name="var3",numchild="114",value="[114]",type="char [114]",has_more="0"
+17-var-create - * text
+
+GDB: 17^error,msg="-var-create: unable to create variable object"
+18-var-create - * key
+
+GDB: 18^done,name="var5",numchild="0",value="0",type="__libc_key_t",has_more="0"
+19-var-create - * argv
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * argc
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * ch
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * fp
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * count
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * fp
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * sc_ret
+
+GDB: 25^done,name="var12",numchild="0",value="<optimized out>",type="long",thread-id="1",has_more="0"
+26-var-create - * resultvar
+
+GDB: 26^done,name="var13",numchild="0",value="18446744073709551104",type="unsigned long",thread-id="1",has_more="0"
+27-var-create - * nbytes
+
+GDB: 27^done,name="var14",numchild="0",value="4096",type="size_t",thread-id="1",has_more="0"
+28-var-create - * buf
+
+GDB: 28^done,name="var15",numchild="0",value="0x602260",type="void *",thread-id="1",has_more="0"
+29-var-create - * fd
+
+GDB: 29^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:2364
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"fd","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var15","numchild":"0"},{"name":"nbytes","type":"size_t","value":"4096","objname":"var14","numchild":"0"}],"locals":[{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var13","numchild":"0"},{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var12","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"count","type":"__ssize_t","value":"<optimized out>"}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"ch","type":"int","value":"<optimized out>"}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"argc","type":"int","value":"2"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840}],"locals":[{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"},{"name":"text","type":"char *","value":"0x400890 <__libc_csu_init> \"AWAVI\\211\\327AUATL\\215%>\\005 \"","address":4196496},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"encrypted","type":"char","value":"0 '\\000'"},{"name":"position","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":5}
+30-exec-next 
+
+GDB: 30^running
+SENDING: Content-Length:51
+
+{"_seq":"30","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":6}
+SENDING: Content-Length:27
+
+{"_id":6,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="6"
+31-stack-list-frames 0 50
+
+GDB: 31^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+32-stack-list-arguments --simple-values 0 50
+
+GDB: 32^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+33-var-update --all-values *
+
+GDB: 33^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2612
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var14","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var15","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var16","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var12","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var13","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":7}
+34-exec-step 
+
+GDB: 34^running
+SENDING: Content-Length:51
+
+{"_seq":"34","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":8}
+SENDING: Content-Length:27
+
+{"_id":8,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="11"
+35-stack-list-frames 0 50
+
+GDB: 35^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+36-stack-list-arguments --simple-values 0 50
+
+GDB: 36^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+37-var-update --all-values *
+
+GDB: 37^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2612
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var14","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var15","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var16","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var12","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var13","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":9}
+38-exec-continue 
+
+GDB: 38^running
+SENDING: Content-Length:51
+
+{"_seq":"38","state":"running","status":{},"_id":9}
+GDB: *running,thread-id="all"
+
+Child exited with status 0
+
+GDB: ~"[Inferior 1 (process 1629) exited normally]\n"
+
+
+Wed Jun 03 2020 16:28:30 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from substitution..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="1784"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="2"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:277
+
+{"path":"/pset1/substitution/substitution.c","line":30,"column":16,"text":"substitution.c","content":"                position = text[i] - 'A';","time":1591201656615,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":2,"id":"1"}
+4-break-insert "/home/ubuntu/pset1/substitution/substitution.c:31"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400742",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="31",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:31"}
+SENDING: Content-Length:361
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400742","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"31","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:31"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+PLUGIN: Content-Length:268
+
+{"path":"/pset1/substitution/substitution.c","line":36,"column":16,"text":"substitution.c","content":"                position = text[i] - 'a';","time":1591201713482,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":4}
+6-break-insert "/home/ubuntu/pset1/substitution/substitution.c:37"
+
+PLUGIN: Content-Length:262
+
+{"path":"/pset1/substitution/substitution.c","line":42,"column":12,"text":"substitution.c","content":"            result[i] = &encrypted;","time":1591201719408,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":5}
+7-break-insert "/home/ubuntu/pset1/substitution/substitution.c:43"
+
+GDB: =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400742",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="31",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset1/substitution/substitution.c:31"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 1, main (argc=2, argv=0x7fffffffe6a8) at substitution.c:31\n"
+GDB: &"warning: Source file is more recent than executable.\n"
+GDB: ~"31\t                position = text[i] - 'A';\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="1",frame={addr="0x0000000000400742",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="31"},thread-id="1",stopped-threads="all",core="3"
+8-stack-list-frames 0 50
+
+GDB: 6^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004007a0",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="37",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:37"}
+SENDING: Content-Length:361
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004007a0","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"37","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:37"}},"_id":4}
+GDB: 7^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004007fa",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="43",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:43"}
+SENDING: Content-Length:361
+
+{"_seq":"7","state":"done","status":{"bkpt":{"number":"3","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004007fa","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"43","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:43"}},"_id":5}
+GDB: 8^done,stack=[frame={level="0",addr="0x0000000000400742",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="31"}]
+9-stack-list-arguments --simple-values 0 50
+
+GDB: 9^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+10-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 10^done,locals=[{name="i",type="int",value="2"},{name="n",type="int",value="9"},{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"\\033[A\\033[A\\033[B\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+11-var-update --all-values *
+
+GDB: 11^done,changelist=[]
+12-var-create - * position
+
+GDB: 12^done,name="var1",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+13-var-create - * encrypted
+
+GDB: 13^done,name="var2",numchild="0",value="0 '\\000'",type="char",thread-id="1",has_more="0"
+14-var-create - * result
+
+GDB: 14^done,name="var3",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+15-var-create - * text
+
+GDB: 15^done,name="var4",numchild="1",value="0x603270 \"\\033[A\\033[A\\033[B\"",type="char *",thread-id="1",has_more="0"
+16-var-create - * key
+
+GDB: 16^done,name="var5",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+17-var-create - * n
+
+GDB: 17^done,name="var6",numchild="0",value="9",type="int",thread-id="1",has_more="0"
+18-var-create - * i
+
+GDB: 18^done,name="var7",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+19-var-create - * argv
+
+GDB: 19^done,name="var8",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+20-var-create - * argc
+
+GDB: 20^done,name="var9",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1022
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400742","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"31","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var9","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var8","numchild":"1"}],"locals":[{"name":"i","type":"int","value":"2","objname":"var7","numchild":"0"},{"name":"n","type":"int","value":"9","objname":"var6","numchild":"0"},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"\\033[A\\033[A\\033[B\"","address":6304368,"objname":"var4","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var3","numchild":"26"},{"name":"encrypted","type":"char","value":"0 '\\000'","objname":"var2","numchild":"0"},{"name":"position","type":"int","value":"0","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+SIGINT
+
+
+Wed Jun 03 2020 16:29:03 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from substitution..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="1969"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="10"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:277
+
+{"path":"/pset1/substitution/substitution.c","line":30,"column":16,"text":"substitution.c","content":"                position = text[i] - 'A';","time":1591201656615,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":2,"id":"1"}
+4-break-insert "/home/ubuntu/pset1/substitution/substitution.c:31"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400742",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="31",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:31"}
+SENDING: Content-Length:361
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400742","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"31","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:31"}},"_id":2}
+PLUGIN: Content-Length:277
+
+{"path":"/pset1/substitution/substitution.c","line":36,"column":16,"text":"substitution.c","content":"                position = text[i] - 'a';","time":1591201713482,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":3,"id":"2"}
+5-break-insert "/home/ubuntu/pset1/substitution/substitution.c:37"
+
+GDB: 5^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004007a0",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="37",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:37"}
+SENDING: Content-Length:361
+
+{"_seq":"5","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004007a0","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"37","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:37"}},"_id":3}
+PLUGIN: Content-Length:271
+
+{"path":"/pset1/substitution/substitution.c","line":42,"column":12,"text":"substitution.c","content":"            result[i] = &encrypted;","time":1591201719408,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":4,"id":"3"}
+6-break-insert "/home/ubuntu/pset1/substitution/substitution.c:43"
+
+GDB: 6^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004007fa",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="43",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:43"}
+SENDING: Content-Length:361
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"3","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004007fa","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"43","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:43"}},"_id":4}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":5}
+7-exec-continue 
+
+GDB: 7^running
+SENDING: Content-Length:50
+
+{"_seq":"7","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":6}
+SENDING: Content-Length:27
+
+{"_id":6,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: &"27\t../sysdeps/unix/sysv/linux/read.c: No such file or directory.\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="10"
+8-stack-list-frames 0 50
+
+GDB: 8^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+9-stack-list-arguments --simple-values 0 50
+
+GDB: 9^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+10-stack-list-locals --thread 1 --frame 4 --simple-values
+
+GDB: 10^done,locals=[{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x400890 <__libc_csu_init> \"AWAVI\\211\\327AUATL\\215%>\\005 \""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+11-stack-list-locals --thread 1 --frame 3 --simple-values
+
+GDB: 11^done,locals=[]
+12-stack-list-locals --thread 1 --frame 2 --simple-values
+
+GDB: 12^done,locals=[{name="ch",type="int",value="<optimized out>"}]
+13-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 13^done,locals=[{name="count",type="__ssize_t",value="<optimized out>"}]
+14-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 14^done,locals=[{name="resultvar",type="unsigned long",value="18446744073709551104"},{name="sc_ret",type="long",value="<optimized out>"}]
+15-var-update --all-values *
+
+GDB: 15^done,changelist=[]
+16-var-create - * position
+
+GDB: 16^error,msg="-var-create: unable to create variable object"
+17-var-create - * encrypted
+
+GDB: 17^error,msg="-var-create: unable to create variable object"
+18-var-create - * result
+
+GDB: 18^done,name="var3",numchild="114",value="[114]",type="char [114]",has_more="0"
+19-var-create - * text
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * key
+
+GDB: 20^done,name="var5",numchild="0",value="0",type="__libc_key_t",has_more="0"
+21-var-create - * argv
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * argc
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * ch
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * fp
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * count
+
+GDB: 25^error,msg="-var-create: unable to create variable object"
+26-var-create - * fp
+
+GDB: 26^error,msg="-var-create: unable to create variable object"
+27-var-create - * sc_ret
+
+GDB: 27^done,name="var12",numchild="0",value="<optimized out>",type="long",thread-id="1",has_more="0"
+28-var-create - * resultvar
+
+GDB: 28^done,name="var13",numchild="0",value="18446744073709551104",type="unsigned long",thread-id="1",has_more="0"
+29-var-create - * nbytes
+
+GDB: 29^done,name="var14",numchild="0",value="4096",type="size_t",thread-id="1",has_more="0"
+30-var-create - * buf
+
+GDB: 30^done,name="var15",numchild="0",value="0x602260",type="void *",thread-id="1",has_more="0"
+31-var-create - * fd
+
+GDB: 31^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:2364
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"fd","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var15","numchild":"0"},{"name":"nbytes","type":"size_t","value":"4096","objname":"var14","numchild":"0"}],"locals":[{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var13","numchild":"0"},{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var12","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"count","type":"__ssize_t","value":"<optimized out>"}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"ch","type":"int","value":"<optimized out>"}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"argc","type":"int","value":"2"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840}],"locals":[{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"},{"name":"text","type":"char *","value":"0x400890 <__libc_csu_init> \"AWAVI\\211\\327AUATL\\215%>\\005 \"","address":4196496},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"encrypted","type":"char","value":"0 '\\000'"},{"name":"position","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":7}
+32-exec-next 
+
+GDB: 32^running
+SENDING: Content-Length:51
+
+{"_seq":"32","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff731a089",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="28"},thread-id="1",stopped-threads="all",core="10"
+33-stack-list-frames 0 50
+
+GDB: 33^done,stack=[frame={level="0",addr="0x00007ffff731a089",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="28"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x00007ffff7297148",func="_IO_new_file_underflow",args=[{name="fp",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}],file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="533"},gdb-result-var="$1",return-value="5",thread-id="1",stopped-threads="all",core="10"
+34-stack-list-frames 0 50
+
+GDB: 34^done,stack=[frame={level="0",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="533"},frame={level="1",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="2",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="3",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",args=[{name="fp",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}],file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="381"},gdb-result-var="$2",return-value="116",thread-id="1",stopped-threads="all",core="10"
+35-stack-list-frames 0 50
+
+GDB: 35^done,stack=[frame={level="0",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="381"},frame={level="1",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="2",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x00007ffff7999f3d",func="get_string",args=[],from="target:/usr/lib/libcs50.so.10"},gdb-result-var="$3",return-value="116",thread-id="1",stopped-threads="all",core="10"
+36-stack-list-frames 0 50
+
+GDB: 36^done,stack=[frame={level="0",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="1",addr="0x00000000004006ca",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="19"}]
+37-stack-list-arguments --simple-values 0 50
+
+GDB: 37^done,stack-args=[frame={level="0",args=[]},frame={level="1",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+38-var-update --all-values *
+
+GDB: 38^done,changelist=[{name="var16",in_scope="false",type_changed="false",has_more="0"},{name="var15",in_scope="false",type_changed="false",has_more="0"},{name="var14",in_scope="false",type_changed="false",has_more="0"},{name="var13",in_scope="false",type_changed="false",has_more="0"},{name="var12",in_scope="false",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:1050
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"1","addr":"0x00000000004006ca","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"19","exists":true,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"result","type":"char *[26]","objname":"var3","numchild":"114"},{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var5","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":8}
+39-exec-next 
+
+GDB: ~"Single stepping until exit from function get_string,\nwhich has no line number information.\n"
+GDB: 39^running
+SENDING: Content-Length:51
+
+{"_seq":"39","state":"running","status":{},"_id":8}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004006ce",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="24"},thread-id="1",stopped-threads="all",core="13"
+40-stack-list-frames 0 50
+
+GDB: 40^done,stack=[frame={level="0",addr="0x00000000004006ce",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="24"}]
+41-stack-list-arguments --simple-values 0 50
+
+GDB: 41^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+42-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 42^done,locals=[{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"tesT\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+43-var-update --all-values *
+
+GDB: 43^done,changelist=[]
+44-var-create - * position
+
+GDB: 44^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+45-var-create - * encrypted
+
+GDB: 45^done,name="var18",numchild="0",value="0 '\\000'",type="char",thread-id="1",has_more="0"
+46-var-create - * result
+
+GDB: 46^done,name="var19",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+47-var-create - * text
+
+GDB: 47^done,name="var20",numchild="1",value="0x603270 \"tesT\"",type="char *",thread-id="1",has_more="0"
+48-var-create - * key
+
+GDB: 48^done,name="var21",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+49-var-create - * argv
+
+GDB: 49^done,name="var22",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+50-var-create - * argc
+
+GDB: 50^done,name="var23",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:872
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004006ce","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"24","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var23","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var22","numchild":"1"}],"locals":[{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var21","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"tesT\"","address":6304368,"objname":"var20","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var19","numchild":"26"},{"name":"encrypted","type":"char","value":"0 '\\000'","objname":"var18","numchild":"0"},{"name":"position","type":"int","value":"0","objname":"var17","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":9}
+51-exec-next 
+
+GDB: 51^running
+SENDING: Content-Length:51
+
+{"_seq":"51","state":"running","status":{},"_id":9}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004006df",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="25"},thread-id="1",stopped-threads="all",core="14"
+52-stack-list-frames 0 50
+
+GDB: 52^done,stack=[frame={level="0",addr="0x00000000004006df",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="25"}]
+53-stack-list-arguments --simple-values 0 50
+
+GDB: 53^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+54-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 54^done,locals=[{name="i",type="int",value="0"},{name="n",type="int",value="0"},{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"tesT\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+55-var-update --all-values *
+
+GDB: 55^done,changelist=[]
+56-var-create - * position
+
+GDB: 56^done,name="var24",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+57-var-create - * encrypted
+
+GDB: 57^done,name="var25",numchild="0",value="0 '\\000'",type="char",thread-id="1",has_more="0"
+58-var-create - * result
+
+GDB: 58^done,name="var26",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+59-var-create - * text
+
+GDB: 59^done,name="var27",numchild="1",value="0x603270 \"tesT\"",type="char *",thread-id="1",has_more="0"
+60-var-create - * key
+
+GDB: 60^done,name="var28",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+61-var-create - * n
+
+GDB: 61^done,name="var29",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+62-var-create - * i
+
+GDB: 62^done,name="var30",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+63-var-create - * argv
+
+GDB: 63^done,name="var31",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+64-var-create - * argc
+
+GDB: 64^done,name="var32",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1014
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004006df","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"25","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var32","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var31","numchild":"1"}],"locals":[{"name":"i","type":"int","value":"0","objname":"var30","numchild":"0"},{"name":"n","type":"int","value":"0","objname":"var29","numchild":"0"},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var28","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"tesT\"","address":6304368,"objname":"var27","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var26","numchild":"26"},{"name":"encrypted","type":"char","value":"0 '\\000'","objname":"var25","numchild":"0"},{"name":"position","type":"int","value":"0","objname":"var24","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":10}
+65-exec-next 
+
+GDB: 65^running
+SENDING: Content-Length:52
+
+{"_seq":"65","state":"running","status":{},"_id":10}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000400712",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="28"},thread-id="1",stopped-threads="all",core="14"
+66-stack-list-frames 0 50
+
+GDB: 66^done,stack=[frame={level="0",addr="0x0000000000400712",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="28"}]
+67-stack-list-arguments --simple-values 0 50
+
+GDB: 67^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+68-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 68^done,locals=[{name="i",type="int",value="0"},{name="n",type="int",value="4"},{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"tesT\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+69-var-update --all-values *
+
+GDB: 69^done,changelist=[{name="var29",value="4",in_scope="true",type_changed="false",has_more="0"}]
+70-var-create - * position
+
+GDB: 70^done,name="var33",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+71-var-create - * encrypted
+
+GDB: 71^done,name="var34",numchild="0",value="0 '\\000'",type="char",thread-id="1",has_more="0"
+72-var-create - * result
+
+GDB: 72^done,name="var35",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+73-var-create - * text
+
+GDB: 73^done,name="var36",numchild="1",value="0x603270 \"tesT\"",type="char *",thread-id="1",has_more="0"
+74-var-create - * key
+
+GDB: 74^done,name="var37",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+75-var-create - * n
+
+GDB: 75^done,name="var38",numchild="0",value="4",type="int",thread-id="1",has_more="0"
+76-var-create - * i
+
+GDB: 76^done,name="var39",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+77-var-create - * argv
+
+GDB: 77^done,name="var40",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+78-var-create - * argc
+
+GDB: 78^done,name="var41",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1014
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400712","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"28","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var41","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var40","numchild":"1"}],"locals":[{"name":"i","type":"int","value":"0","objname":"var39","numchild":"0"},{"name":"n","type":"int","value":"4","objname":"var38","numchild":"0"},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var37","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"tesT\"","address":6304368,"objname":"var36","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var35","numchild":"26"},{"name":"encrypted","type":"char","value":"0 '\\000'","objname":"var34","numchild":"0"},{"name":"position","type":"int","value":"0","objname":"var33","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":11}
+79-exec-next 
+
+GDB: 79^running
+SENDING: Content-Length:52
+
+{"_seq":"79","state":"running","status":{},"_id":11}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000400770",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="35"},thread-id="1",stopped-threads="all",core="14"
+80-stack-list-frames 0 50
+
+GDB: 80^done,stack=[frame={level="0",addr="0x0000000000400770",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="35"}]
+81-stack-list-arguments --simple-values 0 50
+
+GDB: 81^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+82-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 82^done,locals=[{name="i",type="int",value="0"},{name="n",type="int",value="4"},{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"tesT\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+83-var-update --all-values *
+
+GDB: 83^done,changelist=[]
+84-var-create - * position
+
+GDB: 84^done,name="var42",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+85-var-create - * encrypted
+
+GDB: 85^done,name="var43",numchild="0",value="0 '\\000'",type="char",thread-id="1",has_more="0"
+86-var-create - * result
+
+GDB: 86^done,name="var44",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+87-var-create - * text
+
+GDB: 87^done,name="var45",numchild="1",value="0x603270 \"tesT\"",type="char *",thread-id="1",has_more="0"
+88-var-create - * key
+
+GDB: 88^done,name="var46",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+89-var-create - * n
+
+GDB: 89^done,name="var47",numchild="0",value="4",type="int",thread-id="1",has_more="0"
+90-var-create - * i
+
+GDB: 90^done,name="var48",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+91-var-create - * argv
+
+GDB: 91^done,name="var49",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+92-var-create - * argc
+
+GDB: 92^done,name="var50",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1014
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400770","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"35","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var50","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var49","numchild":"1"}],"locals":[{"name":"i","type":"int","value":"0","objname":"var48","numchild":"0"},{"name":"n","type":"int","value":"4","objname":"var47","numchild":"0"},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var46","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"tesT\"","address":6304368,"objname":"var45","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var44","numchild":"26"},{"name":"encrypted","type":"char","value":"0 '\\000'","objname":"var43","numchild":"0"},{"name":"position","type":"int","value":"0","objname":"var42","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":12}
+93-exec-next 
+
+GDB: 93^running
+SENDING: Content-Length:52
+
+{"_seq":"93","state":"running","status":{},"_id":12}
+GDB: *running,thread-id="all"
+GDB: =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004007a0",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="37",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset1/substitution/substitution.c:37"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 2, main (argc=2, argv=0x7fffffffe6a8) at substitution.c:37\n"
+GDB: ~"37\t                position = text[i] - 'a';\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00000000004007a0",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="37"},thread-id="1",stopped-threads="all",core="14"
+94-stack-list-frames 0 50
+
+GDB: 94^done,stack=[frame={level="0",addr="0x00000000004007a0",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="37"}]
+95-stack-list-arguments --simple-values 0 50
+
+GDB: 95^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+96-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 96^done,locals=[{name="i",type="int",value="0"},{name="n",type="int",value="4"},{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"tesT\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="0"}]
+97-var-update --all-values *
+
+GDB: 97^done,changelist=[]
+98-var-create - * position
+
+GDB: 98^done,name="var51",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+99-var-create - * encrypted
+
+GDB: 99^done,name="var52",numchild="0",value="0 '\\000'",type="char",thread-id="1",has_more="0"
+100-var-create - * result
+
+GDB: 100^done,name="var53",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+101-var-create - * text
+
+GDB: 101^done,name="var54",numchild="1",value="0x603270 \"tesT\"",type="char *",thread-id="1",has_more="0"
+102-var-create - * key
+
+GDB: 102^done,name="var55",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+103-var-create - * n
+
+GDB: 103^done,name="var56",numchild="0",value="4",type="int",thread-id="1",has_more="0"
+104-var-create - * i
+
+GDB: 104^done,name="var57",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+105-var-create - * argv
+
+GDB: 105^done,name="var58",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+106-var-create - * argc
+
+GDB: 106^done,name="var59",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1014
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004007a0","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"37","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var59","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var58","numchild":"1"}],"locals":[{"name":"i","type":"int","value":"0","objname":"var57","numchild":"0"},{"name":"n","type":"int","value":"4","objname":"var56","numchild":"0"},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var55","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"tesT\"","address":6304368,"objname":"var54","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var53","numchild":"26"},{"name":"encrypted","type":"char","value":"0 '\\000'","objname":"var52","numchild":"0"},{"name":"position","type":"int","value":"0","objname":"var51","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":13}
+107-exec-next 
+
+GDB: 107^running
+SENDING: Content-Length:53
+
+{"_seq":"107","state":"running","status":{},"_id":13}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004007b8",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="38"},thread-id="1",stopped-threads="all",core="14"
+108-stack-list-frames 0 50
+
+GDB: 108^done,stack=[frame={level="0",addr="0x00000000004007b8",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="38"}]
+109-stack-list-arguments --simple-values 0 50
+
+GDB: 109^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+110-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 110^done,locals=[{name="i",type="int",value="0"},{name="n",type="int",value="4"},{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"tesT\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="0 '\\000'"},{name="position",type="int",value="19"}]
+111-var-update --all-values *
+
+GDB: 111^done,changelist=[{name="var51",value="19",in_scope="true",type_changed="false",has_more="0"},{name="var42",value="19",in_scope="true",type_changed="false",has_more="0"},{name="var33",value="19",in_scope="true",type_changed="false",has_more="0"},{name="var24",value="19",in_scope="true",type_changed="false",has_more="0"},{name="var17",value="19",in_scope="true",type_changed="false",has_more="0"}]
+112-var-create - * position
+
+GDB: 112^done,name="var60",numchild="0",value="19",type="int",thread-id="1",has_more="0"
+113-var-create - * encrypted
+
+GDB: 113^done,name="var61",numchild="0",value="0 '\\000'",type="char",thread-id="1",has_more="0"
+114-var-create - * result
+
+GDB: 114^done,name="var62",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+115-var-create - * text
+
+GDB: 115^done,name="var63",numchild="1",value="0x603270 \"tesT\"",type="char *",thread-id="1",has_more="0"
+116-var-create - * key
+
+GDB: 116^done,name="var64",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+117-var-create - * n
+
+GDB: 117^done,name="var65",numchild="0",value="4",type="int",thread-id="1",has_more="0"
+118-var-create - * i
+
+GDB: 118^done,name="var66",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+119-var-create - * argv
+
+GDB: 119^done,name="var67",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+120-var-create - * argc
+
+GDB: 120^done,name="var68",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1015
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004007b8","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"38","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var68","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var67","numchild":"1"}],"locals":[{"name":"i","type":"int","value":"0","objname":"var66","numchild":"0"},{"name":"n","type":"int","value":"4","objname":"var65","numchild":"0"},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var64","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"tesT\"","address":6304368,"objname":"var63","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var62","numchild":"26"},{"name":"encrypted","type":"char","value":"0 '\\000'","objname":"var61","numchild":"0"},{"name":"position","type":"int","value":"19","objname":"var60","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:31
+
+{"command":"continue","_id":14}
+121-exec-continue 
+
+GDB: 121^running
+SENDING: Content-Length:53
+
+{"_seq":"121","state":"running","status":{},"_id":14}
+GDB: *running,thread-id="all"
+GDB: =breakpoint-modified,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004007fa",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="43",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset1/substitution/substitution.c:43"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 3, main (argc=2, argv=0x7fffffffe6a8) at substitution.c:43\n"
+GDB: ~"43\t            result[i] = &encrypted;\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="3",frame={addr="0x00000000004007fa",func="main",args=[{name="argc",value="2"},{name="argv",value="0x7fffffffe6a8"}],file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="43"},thread-id="1",stopped-threads="all",core="14"
+122-stack-list-frames 0 50
+
+GDB: 122^done,stack=[frame={level="0",addr="0x00000000004007fa",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="43"}]
+123-stack-list-arguments --simple-values 0 50
+
+GDB: 123^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="2"},{name="argv",type="string *",value="0x7fffffffe6a8"}]}]
+124-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 124^done,locals=[{name="i",type="int",value="0"},{name="n",type="int",value="4"},{name="key",type="string",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\""},{name="text",type="char *",value="0x603270 \"tesT\""},{name="result",type="char *[26]"},{name="encrypted",type="char",value="56 '8'"},{name="position",type="int",value="19"}]
+125-var-update --all-values *
+
+GDB: 125^done,changelist=[{name="var61",value="56 '8'",in_scope="true",type_changed="false",has_more="0"},{name="var52",value="56 '8'",in_scope="true",type_changed="false",has_more="0"},{name="var43",value="56 '8'",in_scope="true",type_changed="false",has_more="0"},{name="var34",value="56 '8'",in_scope="true",type_changed="false",has_more="0"},{name="var25",value="56 '8'",in_scope="true",type_changed="false",has_more="0"},{name="var18",value="56 '8'",in_scope="true",type_changed="false",has_more="0"}]
+126-var-create - * position
+
+GDB: 126^done,name="var69",numchild="0",value="19",type="int",thread-id="1",has_more="0"
+127-var-create - * encrypted
+
+GDB: 127^done,name="var70",numchild="0",value="56 '8'",type="char",thread-id="1",has_more="0"
+128-var-create - * result
+
+GDB: 128^done,name="var71",numchild="26",value="[26]",type="char *[26]",thread-id="1",has_more="0"
+129-var-create - * text
+
+GDB: 129^done,name="var72",numchild="1",value="0x603270 \"tesT\"",type="char *",thread-id="1",has_more="0"
+130-var-create - * key
+
+GDB: 130^done,name="var73",numchild="1",value="0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"",type="string",thread-id="1",has_more="0"
+131-var-create - * n
+
+GDB: 131^done,name="var74",numchild="0",value="4",type="int",thread-id="1",has_more="0"
+132-var-create - * i
+
+GDB: 132^done,name="var75",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+133-var-create - * argv
+
+GDB: 133^done,name="var76",numchild="1",value="0x7fffffffe6a8",type="string *",thread-id="1",has_more="0"
+134-var-create - * argc
+
+GDB: 134^done,name="var77",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1012
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004007fa","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"43","exists":true,"args":[{"name":"argc","type":"int","value":"2","objname":"var77","numchild":"0"},{"name":"argv","type":"string *","value":"0x7fffffffe6a8","address":140737488348840,"objname":"var76","numchild":"1"}],"locals":[{"name":"i","type":"int","value":"0","objname":"var75","numchild":"0"},{"name":"n","type":"int","value":"4","objname":"var74","numchild":"0"},{"name":"key","type":"string","value":"0x7fffffffe9d7 \"VCHPRZGJNTLSKFBDQWAXEUYMOI\"","objname":"var73","numchild":"1"},{"name":"text","type":"char *","value":"0x603270 \"tesT\"","address":6304368,"objname":"var72","numchild":"1"},{"name":"result","type":"char *[26]","objname":"var71","numchild":"26"},{"name":"encrypted","type":"char","value":"56 '8'","objname":"var70","numchild":"0"},{"name":"position","type":"int","value":"19","objname":"var69","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:285
+
+{"path":"/pset1/substitution/substitution.c","line":42,"column":12,"text":"substitution.c","content":"            result[i] = &encrypted;","time":1591201719408,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-clear","_id":15,"id":"3","moved":41}
+135-break-delete 3
+
+PLUGIN: Content-Length:283
+
+{"path":"/pset1/substitution/substitution.c","line":41,"column":12,"text":"substitution.c","content":"            result[i] = &encrypted;","time":1591201719408,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-set","_id":16,"id":"3","moved":41}
+136-break-insert "/home/ubuntu/pset1/substitution/substitution.c:42"
+
+GDB: 135^done
+SENDING: Content-Length:50
+
+{"_seq":"135","state":"done","status":{},"_id":15}
+GDB: 136^done,bkpt={number="4",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004007fa",func="main",file="substitution.c",fullname="/home/ubuntu/pset1/substitution/substitution.c",line="42",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset1/substitution/substitution.c:42"}
+SENDING: Content-Length:364
+
+{"_seq":"136","state":"done","status":{"bkpt":{"number":"4","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004007fa","func":"main","file":"substitution.c","fullname":"/home/ubuntu/pset1/substitution/substitution.c","line":"42","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset1/substitution/substitution.c:42"}},"_id":16}
+PLUGIN: Content-Length:280
+
+{"path":"/pset1/substitution/substitution.c","line":30,"column":16,"text":"substitution.c","content":"                position = text[i] - 'A';","time":1591201656615,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-clear","_id":17,"id":"1"}
+137-break-delete 1
+
+GDB: 137^done
+SENDING: Content-Length:50
+
+{"_seq":"137","state":"done","status":{},"_id":17}
+PLUGIN: Content-Length:280
+
+{"path":"/pset1/substitution/substitution.c","line":36,"column":16,"text":"substitution.c","content":"                position = text[i] - 'a';","time":1591201713482,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-clear","_id":18,"id":"2"}
+138-break-delete 2
+
+GDB: 138^done
+SENDING: Content-Length:50
+
+{"_seq":"138","state":"done","status":{},"_id":18}
+PLUGIN: Content-Length:274
+
+{"path":"/pset1/substitution/substitution.c","line":41,"column":12,"text":"substitution.c","content":"            result[i] = &encrypted;","time":1591201719408,"enabled":true,"fullpath":"/home/ubuntu/pset1/substitution/substitution.c","command":"bp-clear","_id":19,"id":"4"}
+139-break-delete 4
+
+GDB: 139^done
+SENDING: Content-Length:50
+
+{"_seq":"139","state":"done","status":{},"_id":19}
+PLUGIN: Content-Length:54
+
+{"exp":"more","f":0,"t":"1","command":"eval","_id":20}
+140-data-evaluate-expression --thread 1 --frame 0 "more"
+
+GDB: 140^error,msg="No symbol \"more\" in current context."
+SENDING: Content-Length:97
+
+{"_seq":"140","state":"error","status":{"msg":"No symbol \"more\" in current context."},"_id":20}
+SIGINT

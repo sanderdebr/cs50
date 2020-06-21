@@ -1,242 +1,3 @@
-./credit
-./credit
-make credit
-./credit
-check50 cs50/problems/2020/x/credit
-make credit
-make credit
-check50 cs50/problems/2020/x/credit
-style50 credit.c
-make credit
-style50 credit.c
-make credit
-style50 credit.c
-submit50 cs50/problems/2020/x/credit
-cd
-git init
-git remote add origin https://github.com/sanderdebr/CS50.git
-git add .
-git commit -m 'week 1'
-git config --global user.email "sander606@gmail.com"
-git config --global user.name "Sander de Bruijn"
-git commit -m 'week 1'
-git push origin master
-git push origin master
-git push origin master
-git rm -r --cached .c9
-git rm -r --cached .cache
-git rm -r --cached .bash_history
-git commit -m 'removed folders'
-git push origin master
-make credit.c
-make credit
-cd pset1/credit
-make credit
-./credit
-./credit
-make credit
-./credit
-make credit
-./credit
-./credit
-make credit
-./credit
-debug ./credit
-debug50 ./credit
-debug50 ./credit
-check50 ./credit
-style50 ./credit
-make substitution
-cd pset1/substitution
-make substitution
-make substitution
-./subsitution
-make substitution
-./substitution
-make substitution
-make substitution
-make substitution
-make substitution
-./substitution
-./substitution inga
-make substitution
-./substitution inga
-make substitution
-./substitution
-./substitution 22
-make substitution
-make substitution
-./substitution 2
-make substitution
-./substitution
-make substitution
-./substitution
-make substitution
-./substitution
-cls
-clear
-make substitution
-./substitution
-make substitution
-./substitution
-./substitution 2 2
-./substitution 1245323
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-clear
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-clear
-make substitution
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-clear
-make substitution
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-clear
-make substitution
-make substitution
-./substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-cd pset1/substitution
-make substitution.c
-make substitution
-make substitution
-./substitution
-./substitution 35253
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI 
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI 
-clear
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI 
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-clear
-clear
-clear
-cls
-clear
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-./substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-make substitution
-make substitution
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-make substitution
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
 ./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
 check50 cs50/problems/2020/x/substitution
 clear
@@ -605,3 +366,263 @@ git push origin master
 cd ..
 cd //
 cd 
+git add .
+git commit -m 'new folder structure'
+git push origin master
+cd
+cd pset3
+mkdir pset3
+cd pset3
+mkdur runoff
+mkdir runoff
+mkdir plurality
+cd plurality
+wget https://cdn.cs50.net/2019/fall/psets/3/plurality/plurality.c
+ls
+cd pset3/plurality
+make plurality
+./plurality
+plurality Alice Bob
+./plurality Alice Bob
+make plurality
+make plurality
+./plurality Alice Bob
+make plurality
+./plurality Alice Bob
+make plurality
+./plurality Alice Bob
+make plurality
+./plurality Alice Bob
+make plurality
+make plurality
+./plurality Alice Bob
+make plurality
+./plurality Alice Bob
+make plurality
+2
+./plurality Alice Bob
+make plurality
+make plurality
+make plurality
+make plurality
+./plurality Alice Bob
+make plurality
+make plurality
+./plurality Alice Bob
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+./plurality Alice Bob
+./plurality Alice Bob Berend
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+make plurality
+make plurality
+make plurality
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+./plurality Alice Bob Berend
+./plurality Alice Bob Berend
+make plurality
+make plurality
+make plurality
+./plurality Alice Bob Berend
+make plurality
+make plurality
+make plurality
+make plurality
+make plurality
+./plurality Alice Bob Berend
+./plurality Alice Bob Berend
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+make plurality
+make plurality
+./plurality Alice Bob Berend
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Berend
+./plurality Alice Bob Berend
+make plurality
+./plurality Alice Bob Charlie
+check50 cs50/problems/2020/x/plurality
+style50 plurality.c
+style50 plurality.c
+make plurality
+style50 plurality.c
+check50 cs50/problems/2020/x/plurality
+style50 plurality.c
+style50 plurality.c
+submit50 cs50/problems/2020/x/plurality
+cd pset3/runoff
+wget https://cdn.cs50.net/2019/fall/psets/3/runoff/runoff.c
+make runoff
+./runoff
+./runoff Alice Bob Charlie
+make runoff
+make runoff
+make runoff
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+make runoff
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+make runoff
+cls
+clear
+clear
+make runoff
+make runoff
+make runoff
+make runoff
+clear
+make runoff
+make runoff
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+make runoff
+make runoff
+make runoff
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+make runoff
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+debug50 ./runoff Alice Bob Charlie
+debug50 ./runoff Alice Bob Charlie
+debug50 ./runoff Alice Bob Charlie
+make runoff
+debug50 ./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+./runoff Alice Bob Charlie
+check50 cs50/problems/2020/x/runoff
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+./runoff Alice Bob Charlie
+make runoff
+check50 cs50/problems/2020/x/runoff
+make runoff
+debug50 ./runoff Alice Bob Charlie
+make runoff
+check50 cs50/problems/2020/x/runoff
+make runoff
+check50 cs50/problems/2020/x/runoff
+make runoff
+check50 cs50/problems/2020/x/runoff
+style50 runoff.c
+style50 runoff.c
+submit50 cs50/problems/2020/x/runoff
+cd

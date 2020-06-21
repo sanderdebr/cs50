@@ -1,10 +1,10 @@
 {
     "cs50": {
         "debug": {
-            "@name": null,
-            "@pid": null,
-            "@proxy": null,
-            "@runner": null
+            "@name": "output",
+            "@pid": 10917,
+            "@proxy": 10973,
+            "@runner": "GDBMonitor"
         },
         "simple": {
             "settings": {

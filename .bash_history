@@ -1,149 +1,3 @@
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-check50 cs50/problems/2020/x/substitution
-clear
-make substitution
-check50 cs50/problems/2020/x/substitution
-make substitution
-make substitution
-make substitution
-make substitution
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-make substitution
-./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
-check50 cs50/problems/2020/x/substitution
-make substitution
-./substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA...
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-make substitution
-make substitution
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-clear
-make substitution
-make substitution
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-abc
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-ABC
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-check50 cs50/problems/2020/x/substitution
-make substitution
-clear
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-make substitution
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-make substitution
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-abc
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-clear
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-git add .
-git commit -m 'update'
-git status
-git remote -v
-git push origin master
-make substitution
-cd pset1/substitution
-make substitution
 ./substitution
 make substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
 ./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
@@ -625,4 +479,68 @@ check50 cs50/problems/2020/x/runoff
 style50 runoff.c
 style50 runoff.c
 submit50 cs50/problems/2020/x/runoff
+cd
+git add .
+git remote -v
+git commit -m "week 3 finished"
+git push origin master
+cd
+mkdir pset4
+cd pset4
+wget https://cdn.cs50.net/2019/fall/psets/4/filter/less/filter.zip
+unzip filter.zip
+rm filter.zip
+ls
+cd filter
+ls
+cls
+clear
+make filter
+./filter -g images/yard.bmp out.bmp
+make filter
+make filter
+cd pset4
+make filter
+cd filter
+make filter
+cls
+clear
+make filter
+./filter -g images/yard.bmp out.bmp
+debug50 filter
+debug50 ./filter -g images/yard.bmp out.bmp
+debug50 ./filter -g images/yard.bmp out.bmp
+debug50 ./filter -g images/yard.bmp out.bmp
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+make filter
+clear
+make filter
+make filter
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+make filter
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+./filter -g images/yard.bmp out.bmp
+git add .
 cd

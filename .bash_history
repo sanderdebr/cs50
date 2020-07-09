@@ -549,3 +549,95 @@ debug50  ./filter -b images/yard.bmp out.bmp
 git add .
 cd
 git add 
+git add .
+git commit -m "add all"
+git push origin master
+make filter
+cd pset4/filter
+make filter
+debug50  ./filter -b images/yard.bmp out.bmp
+make filter
+debug50  ./filter -b images/yard.bmp out.bmp
+make filter
+make filter
+debug50  ./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+debug50 ./filter -b images/yard.bmp out.bmp
+make filter
+debug50 ./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+make filter
+make filter
+./filter -b images/yard.bmp out.bmp
+check50 cs50/problems/2020/x/filter/less
+make filter
+make filter
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+ filters single pixel with whole number average
+:( grayscale correctly filters single pixel without whole number average
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+make filter
+make filter
+debug50 ./filter -g images/yard.bmp out.bmp
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+./filter -r infile.bmp outfile.bmp
+./filter -r ./images/stadium.bmp out.bmp
+make filter
+./filter -r ./images/stadium.bmp out.bmp
+check50 cs50/problems/2020/x/filter/less
+make filter
+./filter -r ./images/stadium.bmp out.bmp
+make filter
+make filter
+make filter
+./filter -r ./images/stadium.bmp out.bmp
+make filter
+./filter -r ./images/stadium.bmp out.bmp
+make filter
+cd

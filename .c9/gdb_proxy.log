@@ -12502,3 +12502,1600 @@ SENDING: Content-Length:1862
 {"thread":"1","frames":[{"level":"0","addr":"0x00000000004241b6","func":"grayscale","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"21","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var84","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var83","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var82","numchild":"1"}],"locals":[{"name":"blue","type":"BYTE","value":"20 '\\024'","objname":"var81","numchild":"0"},{"name":"green","type":"BYTE","value":"61 '='","objname":"var80","numchild":"0"},{"name":"red","type":"BYTE","value":"29 '\\035'","objname":"var79","numchild":"0"},{"name":"avg","type":"int","value":"36","objname":"var78","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var77","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var76","numchild":"0"},{"name":"average","type":"RGBTRIPLE","objname":"var75","numchild":"3"}]},{"level":"1","addr":"0x000000000042325f","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"110","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"}],"locals":[{"name":"argc","type":"int","value":"4"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"}]}]}
 GDB: ^done
 SIGINT
+
+
+Thu Jul 09 2020 14:12:41 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./filter..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="1066"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="7"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:211
+
+{"path":"/pset3/runoff/runoff.c","line":152,"column":12,"text":"runoff.c","content":"            {","time":1592730352279,"enabled":true,"fullpath":"/home/ubuntu/pset3/runoff/runoff.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/runoff/runoff.c:153"
+
+GDB: 4^error,msg="No source file named /home/ubuntu/pset3/runoff/runoff.c."
+SENDING: Content-Length:112
+
+{"_seq":"4","state":"error","status":{"msg":"No source file named /home/ubuntu/pset3/runoff/runoff.c."},"_id":2}
+PLUGIN: Content-Length:249
+
+{"path":"/pset4/filter/helpers.c","line":14,"column":12,"text":"helpers.c","content":"            RGBTRIPLE avg = image[i][j];","time":1594222250138,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":3,"id":"1"}
+5-break-insert "/home/ubuntu/pset4/filter/helpers.c:15"
+
+GDB: 5^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000423672",func="grayscale",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="15",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:15"}
+SENDING: Content-Length:339
+
+{"_seq":"5","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000423672","func":"grayscale","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"15","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:15"}},"_id":3}
+PLUGIN: Content-Length:248
+
+{"path":"/pset4/filter/helpers.c","line":93,"column":12,"text":"helpers.c","content":"            image[i][width - j].rgbtBlue = blue;","time":1594303944367,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":4}
+6-break-insert "/home/ubuntu/pset4/filter/helpers.c:94"
+
+GDB: 6^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000426200",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="94",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:94"}
+SENDING: Content-Length:337
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000426200","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"94","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:94"}},"_id":4}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":5}
+7-exec-continue 
+
+GDB: 7^running
+SENDING: Content-Length:50
+
+{"_seq":"7","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7bbbbb0",to="0x00007ffff7bca0f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff79b0200",to="0x00007ffff79b370c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff761ba80",to="0x00007ffff76da2f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff740ce50",to="0x00007ffff740dbde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71f6ac0",to="0x00007ffff72073fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6e242d0",to="0x00007ffff6f9cc3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+GDB: =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000426200",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="94",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset4/filter/helpers.c:94"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 2, reflect (height=400, width=600, image=0x7ffff7f2d010) at helpers.c:94\n"
+GDB: ~"94\t            image[i][width - j].rgbtBlue = blue;\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x0000000000426200",func="reflect",args=[{name="height",value="400"},{name="width",value="600"},{name="image",value="0x7ffff7f2d010"}],file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="94"},thread-id="1",stopped-threads="all",core="3"
+8-stack-list-frames 0 50
+
+GDB: 8^done,stack=[frame={level="0",addr="0x0000000000426200",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="94"},frame={level="1",addr="0x000000000042327c",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="115"}]
+9-stack-list-arguments --simple-values 0 50
+
+GDB: 9^done,stack-args=[frame={level="0",args=[{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"}]},frame={level="1",args=[{name="argc",type="int",value="4"},{name="argv",type="char **",value="0x7fffffffe6d8"}]}]
+10-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 10^done,locals=[{name="filters",type="char *",value="0x42f474 \"bgrs\""},{name="filter",type="char",value="114 'r'"},{name="infile",type="char *",value="0x7fffffffe9ec \"images/yard.bmp\""},{name="outfile",type="char *",value="0x7fffffffe9fc \"out.bmp\""},{name="inptr",type="FILE *",value="0xecd290"},{name="outptr",type="FILE *",value="0xecd4c0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"},{name="padding",type="int",value="0"}]
+11-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 11^done,locals=[{name="blue",type="BYTE",value="20 '\\024'"},{name="green",type="BYTE",value="61 '='"},{name="red",type="BYTE",value="29 '\\035'"},{name="avg",type="int",value="36"},{name="j",type="int",value="0"},{name="i",type="int",value="0"}]
+12-var-update --all-values *
+
+GDB: 12^done,changelist=[]
+13-var-create - * padding
+
+GDB: 13^error,msg="-var-create: unable to create variable object"
+14-var-create - * image
+
+GDB: 14^done,name="var2",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+15-var-create - * width
+
+GDB: 15^done,name="var3",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+16-var-create - * height
+
+GDB: 16^done,name="var4",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+17-var-create - * bi
+
+GDB: 17^error,msg="-var-create: unable to create variable object"
+18-var-create - * bf
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * outptr
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * inptr
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * outfile
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * infile
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * filter
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * filters
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * argv
+
+GDB: 25^error,msg="-var-create: unable to create variable object"
+26-var-create - * argc
+
+GDB: 26^error,msg="-var-create: unable to create variable object"
+27-var-create - * i
+
+GDB: 27^done,name="var15",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+28-var-create - * j
+
+GDB: 28^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+29-var-create - * avg
+
+GDB: 29^done,name="var17",numchild="0",value="36",type="int",thread-id="1",has_more="0"
+30-var-create - * red
+
+GDB: 30^done,name="var18",numchild="0",value="29 '\\035'",type="BYTE",thread-id="1",has_more="0"
+31-var-create - * green
+
+GDB: 31^done,name="var19",numchild="0",value="61 '='",type="BYTE",thread-id="1",has_more="0"
+32-var-create - * blue
+
+GDB: 32^done,name="var20",numchild="0",value="20 '\\024'",type="BYTE",thread-id="1",has_more="0"
+33-var-create - * image
+
+GDB: 33^done,name="var21",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+34-var-create - * width
+
+GDB: 34^done,name="var22",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+35-var-create - * height
+
+GDB: 35^done,name="var23",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:2064
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000426200","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"94","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var23","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var22","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var21","numchild":"1"}],"locals":[{"name":"blue","type":"BYTE","value":"20 '\\024'","objname":"var20","numchild":"0"},{"name":"green","type":"BYTE","value":"61 '='","objname":"var19","numchild":"0"},{"name":"red","type":"BYTE","value":"29 '\\035'","objname":"var18","numchild":"0"},{"name":"avg","type":"int","value":"36","objname":"var17","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var15","numchild":"0"}]},{"level":"1","addr":"0x000000000042327c","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"115","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argv","type":"char **","value":"0x7fffffffe6d8","address":140737488348888}],"locals":[{"name":"filters","type":"char *","value":"0x42f474 \"bgrs\"","address":4387956},{"name":"filter","type":"char","value":"114 'r'"},{"name":"infile","type":"char *","value":"0x7fffffffe9ec \"images/yard.bmp\"","address":140737488349676},{"name":"outfile","type":"char *","value":"0x7fffffffe9fc \"out.bmp\"","address":140737488349692},{"name":"inptr","type":"FILE *","value":"0xecd290","address":15520400},{"name":"outptr","type":"FILE *","value":"0xecd4c0","address":15520960},{"name":"bf","type":"BITMAPFILEHEADER"},{"name":"bi","type":"BITMAPINFOHEADER"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"padding","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:49
+
+{"name":"var21","command":"var-children","_id":6}
+36-var-list-children --simple-values var21
+
+GDB: 36^done,numchild="1",children=[child={name="var21.*image",exp="*image",numchild="0",type="RGBTRIPLE []",thread-id="1"}],has_more="0"
+SENDING: Content-Length:154
+
+{"_id":6,"children":[{"name":"var21.*image","exp":"*image","numchild":"0","type":"RGBTRIPLE []","thread-id":"1","objname":"var21.*image"}],"state":"done"}
+PLUGIN: Content-Length:54
+
+{"exp":"image","f":0,"t":"1","command":"eval","_id":7}
+37-data-evaluate-expression --thread 1 --frame 0 "image"
+
+GDB: 37^done,value="0x7ffff7f2d010"
+SENDING: Content-Length:72
+
+{"_seq":"37","state":"done","status":{"value":"0x7ffff7f2d010"},"_id":7}
+PLUGIN: Content-Length:270
+
+{"path":"/pset4/filter/helpers.c","line":93,"column":12,"text":"helpers.c","content":"            image[i][width - j].rgbtBlue = blue;","time":1594303944367,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-clear","_id":8,"id":"2","moved":94}Content-Length:268
+
+{"path":"/pset4/filter/helpers.c","line":94,"column":12,"text":"helpers.c","content":"            image[i][width - j].rgbtBlue = blue;","time":1594303944367,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":9,"id":"2","moved":94}
+38-break-delete 2
+
+GDB: 38^done
+SENDING: Content-Length:48
+
+{"_seq":"38","state":"done","status":{},"_id":8}
+39-break-insert "/home/ubuntu/pset4/filter/helpers.c:95"
+
+GDB: 39^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000426472",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="95",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:95"}
+SENDING: Content-Length:338
+
+{"_seq":"39","state":"done","status":{"bkpt":{"number":"3","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000426472","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"95","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:95"}},"_id":9}
+SIGINT
+
+
+Thu Jul 09 2020 14:13:38 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./filter..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="1337"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="7"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:211
+
+{"path":"/pset3/runoff/runoff.c","line":152,"column":12,"text":"runoff.c","content":"            {","time":1592730352279,"enabled":true,"fullpath":"/home/ubuntu/pset3/runoff/runoff.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/runoff/runoff.c:153"
+
+GDB: 4^error,msg="No source file named /home/ubuntu/pset3/runoff/runoff.c."
+SENDING: Content-Length:112
+
+{"_seq":"4","state":"error","status":{"msg":"No source file named /home/ubuntu/pset3/runoff/runoff.c."},"_id":2}
+PLUGIN: Content-Length:249
+
+{"path":"/pset4/filter/helpers.c","line":14,"column":12,"text":"helpers.c","content":"            RGBTRIPLE avg = image[i][j];","time":1594222250138,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":3,"id":"1"}
+5-break-insert "/home/ubuntu/pset4/filter/helpers.c:15"
+
+GDB: 5^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000423672",func="grayscale",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="15",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:15"}
+SENDING: Content-Length:339
+
+{"_seq":"5","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000423672","func":"grayscale","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"15","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:15"}},"_id":3}
+PLUGIN: Content-Length:257
+
+{"path":"/pset4/filter/helpers.c","line":94,"column":12,"text":"helpers.c","content":"            image[i][width - j].rgbtBlue = blue;","time":1594303944367,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":4,"id":"3"}
+6-break-insert "/home/ubuntu/pset4/filter/helpers.c:95"
+
+GDB: 6^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000426464",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="95",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:95"}
+SENDING: Content-Length:337
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000426464","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"95","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:95"}},"_id":4}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":5}
+7-exec-continue 
+
+GDB: 7^running
+SENDING: Content-Length:50
+
+{"_seq":"7","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7bbbbb0",to="0x00007ffff7bca0f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff79b0200",to="0x00007ffff79b370c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff761ba80",to="0x00007ffff76da2f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff740ce50",to="0x00007ffff740dbde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71f6ac0",to="0x00007ffff72073fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6e242d0",to="0x00007ffff6f9cc3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+helpers.c:94:25: runtime error: index 600 out of bounds for type 'RGBTRIPLE [width]'
+
+GDB: =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000426464",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="95",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset4/filter/helpers.c:95"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 2, reflect (height=400, width=600, image=0x7ffff7f2d010) at helpers.c:95\n"
+GDB: ~"95\t            image[i][width - j].rgbtBlue = blue;\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x0000000000426464",func="reflect",args=[{name="height",value="400"},{name="width",value="600"},{name="image",value="0x7ffff7f2d010"}],file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="95"},thread-id="1",stopped-threads="all",core="12"
+8-stack-list-frames 0 50
+
+GDB: 8^done,stack=[frame={level="0",addr="0x0000000000426464",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="95"},frame={level="1",addr="0x000000000042327c",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="115"}]
+9-stack-list-arguments --simple-values 0 50
+
+GDB: 9^done,stack-args=[frame={level="0",args=[{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"}]},frame={level="1",args=[{name="argc",type="int",value="4"},{name="argv",type="char **",value="0x7fffffffe6d8"}]}]
+10-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 10^done,locals=[{name="filters",type="char *",value="0x42f6d4 \"bgrs\""},{name="filter",type="char",value="114 'r'"},{name="infile",type="char *",value="0x7fffffffe9ec \"images/yard.bmp\""},{name="outfile",type="char *",value="0x7fffffffe9fc \"out.bmp\""},{name="inptr",type="FILE *",value="0xecd290"},{name="outptr",type="FILE *",value="0xecd4c0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"},{name="padding",type="int",value="0"}]
+11-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 11^done,locals=[{name="blue",type="BYTE",value="20 '\\024'"},{name="green",type="BYTE",value="61 '='"},{name="red",type="BYTE",value="29 '\\035'"},{name="test",type="BYTE",value="17 '\\021'"},{name="avg",type="int",value="36"},{name="j",type="int",value="0"},{name="i",type="int",value="0"}]
+12-var-update --all-values *
+
+GDB: 12^done,changelist=[]
+13-var-create - * padding
+
+GDB: 13^error,msg="-var-create: unable to create variable object"
+14-var-create - * image
+
+GDB: 14^done,name="var2",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+15-var-create - * width
+
+GDB: 15^done,name="var3",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+16-var-create - * height
+
+GDB: 16^done,name="var4",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+17-var-create - * bi
+
+GDB: 17^error,msg="-var-create: unable to create variable object"
+18-var-create - * bf
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * outptr
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * inptr
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * outfile
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * infile
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * filter
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * filters
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * argv
+
+GDB: 25^error,msg="-var-create: unable to create variable object"
+26-var-create - * argc
+
+GDB: 26^error,msg="-var-create: unable to create variable object"
+27-var-create - * i
+
+GDB: 27^done,name="var15",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+28-var-create - * j
+
+GDB: 28^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+29-var-create - * avg
+
+GDB: 29^done,name="var17",numchild="0",value="36",type="int",thread-id="1",has_more="0"
+30-var-create - * test
+
+GDB: 30^done,name="var18",numchild="0",value="17 '\\021'",type="BYTE",thread-id="1",has_more="0"
+31-var-create - * red
+
+GDB: 31^done,name="var19",numchild="0",value="29 '\\035'",type="BYTE",thread-id="1",has_more="0"
+32-var-create - * green
+
+GDB: 32^done,name="var20",numchild="0",value="61 '='",type="BYTE",thread-id="1",has_more="0"
+33-var-create - * blue
+
+GDB: 33^done,name="var21",numchild="0",value="20 '\\024'",type="BYTE",thread-id="1",has_more="0"
+34-var-create - * image
+
+GDB: 34^done,name="var22",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+35-var-create - * width
+
+GDB: 35^done,name="var23",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+36-var-create - * height
+
+GDB: 36^done,name="var24",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:2148
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000426464","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"95","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var24","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var23","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var22","numchild":"1"}],"locals":[{"name":"blue","type":"BYTE","value":"20 '\\024'","objname":"var21","numchild":"0"},{"name":"green","type":"BYTE","value":"61 '='","objname":"var20","numchild":"0"},{"name":"red","type":"BYTE","value":"29 '\\035'","objname":"var19","numchild":"0"},{"name":"test","type":"BYTE","value":"17 '\\021'","objname":"var18","numchild":"0"},{"name":"avg","type":"int","value":"36","objname":"var17","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var15","numchild":"0"}]},{"level":"1","addr":"0x000000000042327c","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"115","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argv","type":"char **","value":"0x7fffffffe6d8","address":140737488348888}],"locals":[{"name":"filters","type":"char *","value":"0x42f6d4 \"bgrs\"","address":4388564},{"name":"filter","type":"char","value":"114 'r'"},{"name":"infile","type":"char *","value":"0x7fffffffe9ec \"images/yard.bmp\"","address":140737488349676},{"name":"outfile","type":"char *","value":"0x7fffffffe9fc \"out.bmp\"","address":140737488349692},{"name":"inptr","type":"FILE *","value":"0xecd290","address":15520400},{"name":"outptr","type":"FILE *","value":"0xecd4c0","address":15520960},{"name":"bf","type":"BITMAPFILEHEADER"},{"name":"bi","type":"BITMAPINFOHEADER"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"padding","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:50
+
+{"exp":"j","f":0,"t":"1","command":"eval","_id":6}
+37-data-evaluate-expression --thread 1 --frame 0 "j"
+
+GDB: 37^done,value="0"
+SENDING: Content-Length:59
+
+{"_seq":"37","state":"done","status":{"value":"0"},"_id":6}
+SIGINT
+
+
+Thu Jul 09 2020 14:17:22 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./filter..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="1876"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="11"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:211
+
+{"path":"/pset3/runoff/runoff.c","line":152,"column":12,"text":"runoff.c","content":"            {","time":1592730352279,"enabled":true,"fullpath":"/home/ubuntu/pset3/runoff/runoff.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/runoff/runoff.c:153"
+
+GDB: 4^error,msg="No source file named /home/ubuntu/pset3/runoff/runoff.c."
+SENDING: Content-Length:112
+
+{"_seq":"4","state":"error","status":{"msg":"No source file named /home/ubuntu/pset3/runoff/runoff.c."},"_id":2}
+PLUGIN: Content-Length:249
+
+{"path":"/pset4/filter/helpers.c","line":14,"column":12,"text":"helpers.c","content":"            RGBTRIPLE avg = image[i][j];","time":1594222250138,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":3,"id":"1"}
+5-break-insert "/home/ubuntu/pset4/filter/helpers.c:15"
+
+GDB: 5^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000423672",func="grayscale",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="15",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:15"}
+SENDING: Content-Length:339
+
+{"_seq":"5","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000423672","func":"grayscale","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"15","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:15"}},"_id":3}
+PLUGIN: Content-Length:232
+
+{"path":"/pset4/filter/helpers.c","line":88,"column":12,"text":"helpers.c","content":"            int myWidth = width;","time":1594304230955,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":4}
+6-break-insert "/home/ubuntu/pset4/filter/helpers.c:89"
+
+GDB: 6^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000425b39",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="89",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:89"}
+SENDING: Content-Length:337
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000425b39","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"89","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:89"}},"_id":4}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":5}
+7-exec-continue 
+
+GDB: 7^running
+SENDING: Content-Length:50
+
+{"_seq":"7","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7bbbbb0",to="0x00007ffff7bca0f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff79b0200",to="0x00007ffff79b370c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff761ba80",to="0x00007ffff76da2f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff740ce50",to="0x00007ffff740dbde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71f6ac0",to="0x00007ffff72073fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6e242d0",to="0x00007ffff6f9cc3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+GDB: =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000425b39",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="89",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset4/filter/helpers.c:89"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 2, reflect (height=400, width=600, image=0x7ffff7f2d010) at helpers.c:89\n"
+GDB: ~"89\t            int myWidth = width;\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x0000000000425b39",func="reflect",args=[{name="height",value="400"},{name="width",value="600"},{name="image",value="0x7ffff7f2d010"}],file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="89"},thread-id="1",stopped-threads="all",core="13"
+8-stack-list-frames 0 50
+
+GDB: 8^done,stack=[frame={level="0",addr="0x0000000000425b39",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="89"},frame={level="1",addr="0x000000000042327c",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="115"}]
+9-stack-list-arguments --simple-values 0 50
+
+GDB: 9^done,stack-args=[frame={level="0",args=[{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"}]},frame={level="1",args=[{name="argc",type="int",value="4"},{name="argv",type="char **",value="0x7fffffffe6d8"}]}]
+10-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 10^done,locals=[{name="filters",type="char *",value="0x42f354 \"bgrs\""},{name="filter",type="char",value="114 'r'"},{name="infile",type="char *",value="0x7fffffffe9ec \"images/yard.bmp\""},{name="outfile",type="char *",value="0x7fffffffe9fc \"out.bmp\""},{name="inptr",type="FILE *",value="0xecd290"},{name="outptr",type="FILE *",value="0xecd4c0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"},{name="padding",type="int",value="0"}]
+11-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 11^done,locals=[{name="myWidth",type="int",value="32767"},{name="j",type="int",value="0"},{name="i",type="int",value="0"}]
+12-var-update --all-values *
+
+GDB: 12^done,changelist=[]
+13-var-create - * padding
+
+GDB: 13^error,msg="-var-create: unable to create variable object"
+14-var-create - * image
+
+GDB: 14^done,name="var2",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+15-var-create - * width
+
+GDB: 15^done,name="var3",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+16-var-create - * height
+
+GDB: 16^done,name="var4",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+17-var-create - * bi
+
+GDB: 17^error,msg="-var-create: unable to create variable object"
+18-var-create - * bf
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * outptr
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * inptr
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * outfile
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * infile
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * filter
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * filters
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * argv
+
+GDB: 25^error,msg="-var-create: unable to create variable object"
+26-var-create - * argc
+
+GDB: 26^error,msg="-var-create: unable to create variable object"
+27-var-create - * i
+
+GDB: 27^done,name="var15",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+28-var-create - * j
+
+GDB: 28^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+29-var-create - * myWidth
+
+GDB: 29^done,name="var17",numchild="0",value="32767",type="int",thread-id="1",has_more="0"
+30-var-create - * image
+
+GDB: 30^done,name="var18",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+31-var-create - * width
+
+GDB: 31^done,name="var19",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+32-var-create - * height
+
+GDB: 32^done,name="var20",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1823
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000425b39","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"89","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var20","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var19","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var18","numchild":"1"}],"locals":[{"name":"myWidth","type":"int","value":"32767","objname":"var17","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var15","numchild":"0"}]},{"level":"1","addr":"0x000000000042327c","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"115","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argv","type":"char **","value":"0x7fffffffe6d8","address":140737488348888}],"locals":[{"name":"filters","type":"char *","value":"0x42f354 \"bgrs\"","address":4387668},{"name":"filter","type":"char","value":"114 'r'"},{"name":"infile","type":"char *","value":"0x7fffffffe9ec \"images/yard.bmp\"","address":140737488349676},{"name":"outfile","type":"char *","value":"0x7fffffffe9fc \"out.bmp\"","address":140737488349692},{"name":"inptr","type":"FILE *","value":"0xecd290","address":15520400},{"name":"outptr","type":"FILE *","value":"0xecd4c0","address":15520960},{"name":"bf","type":"BITMAPFILEHEADER"},{"name":"bi","type":"BITMAPINFOHEADER"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"padding","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:56
+
+{"exp":"rgbtRed","f":0,"t":"1","command":"eval","_id":6}
+33-data-evaluate-expression --thread 1 --frame 0 "rgbtRed"
+
+GDB: 33^error,msg="No symbol \"rgbtRed\" in current context."
+SENDING: Content-Length:98
+
+{"_seq":"33","state":"error","status":{"msg":"No symbol \"rgbtRed\" in current context."},"_id":6}
+PLUGIN: Content-Length:57
+
+{"exp":"rgbtBlue","f":0,"t":"1","command":"eval","_id":7}
+34-data-evaluate-expression --thread 1 --frame 0 "rgbtBlue"
+
+GDB: 34^error,msg="No symbol \"rgbtBlue\" in current context."
+SENDING: Content-Length:99
+
+{"_seq":"34","state":"error","status":{"msg":"No symbol \"rgbtBlue\" in current context."},"_id":7}
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":8}
+35-exec-step 
+
+GDB: 35^running
+SENDING: Content-Length:51
+
+{"_seq":"35","state":"running","status":{},"_id":8}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000425b3f",func="reflect",args=[{name="height",value="400"},{name="width",value="600"},{name="image",value="0x7ffff7f2d010"}],file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="90"},thread-id="1",stopped-threads="all",core="13"
+36-stack-list-frames 0 50
+
+GDB: 36^done,stack=[frame={level="0",addr="0x0000000000425b3f",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="90"},frame={level="1",addr="0x000000000042327c",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="115"}]
+37-stack-list-arguments --simple-values 0 50
+
+GDB: 37^done,stack-args=[frame={level="0",args=[{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"}]},frame={level="1",args=[{name="argc",type="int",value="4"},{name="argv",type="char **",value="0x7fffffffe6d8"}]}]
+38-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 38^done,locals=[{name="myWidth",type="int",value="600"},{name="j",type="int",value="0"},{name="i",type="int",value="0"}]
+39-var-update --all-values *
+
+GDB: 39^done,changelist=[{name="var17",value="600",in_scope="true",type_changed="false",has_more="0"}]
+40-var-create - * i
+
+GDB: 40^done,name="var21",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+41-var-create - * j
+
+GDB: 41^done,name="var22",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+42-var-create - * myWidth
+
+GDB: 42^done,name="var23",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+43-var-create - * image
+
+GDB: 43^done,name="var24",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+44-var-create - * width
+
+GDB: 44^done,name="var25",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+45-var-create - * height
+
+GDB: 45^done,name="var26",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1546
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000425b3f","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"90","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var26","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var25","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var24","numchild":"1"}],"locals":[{"name":"myWidth","type":"int","value":"600","objname":"var23","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var22","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var21","numchild":"0"}]},{"level":"1","addr":"0x000000000042327c","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"115","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"}],"locals":[{"name":"argc","type":"int","value":"4"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"},{"name":"argc","type":"int","value":"4"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:50
+
+{"exp":"i","f":0,"t":"1","command":"eval","_id":9}
+46-data-evaluate-expression --thread 1 --frame 0 "i"
+
+GDB: 46^done,value="0"
+SENDING: Content-Length:59
+
+{"_seq":"46","state":"done","status":{"value":"0"},"_id":9}
+SIGINT
+
+
+Thu Jul 09 2020 14:32:11 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+SIGINT
+
+
+Thu Jul 09 2020 14:32:21 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./filter..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="3357"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="15"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:211
+
+{"path":"/pset3/runoff/runoff.c","line":152,"column":12,"text":"runoff.c","content":"            {","time":1592730352279,"enabled":true,"fullpath":"/home/ubuntu/pset3/runoff/runoff.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/runoff/runoff.c:153"
+
+GDB: 4^error,msg="No source file named /home/ubuntu/pset3/runoff/runoff.c."
+SENDING: Content-Length:112
+
+{"_seq":"4","state":"error","status":{"msg":"No source file named /home/ubuntu/pset3/runoff/runoff.c."},"_id":2}
+PLUGIN: Content-Length:249
+
+{"path":"/pset4/filter/helpers.c","line":14,"column":12,"text":"helpers.c","content":"            RGBTRIPLE avg = image[i][j];","time":1594222250138,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":3,"id":"1"}
+5-break-insert "/home/ubuntu/pset4/filter/helpers.c:15"
+
+GDB: 5^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000423672",func="grayscale",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="15",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:15"}
+SENDING: Content-Length:339
+
+{"_seq":"5","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000423672","func":"grayscale","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"15","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:15"}},"_id":3}
+PLUGIN: Content-Length:241
+
+{"path":"/pset4/filter/helpers.c","line":87,"column":12,"text":"helpers.c","content":"            int myWidth = width;","time":1594304230955,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":4,"id":"2"}
+6-break-insert "/home/ubuntu/pset4/filter/helpers.c:88"
+
+GDB: 6^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000425b39",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="88",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:88"}
+SENDING: Content-Length:337
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000425b39","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"88","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:88"}},"_id":4}
+PLUGIN: Content-Length:239
+
+{"path":"/pset4/filter/helpers.c","line":127,"column":12,"text":"helpers.c","content":"            avg = avg / sizeof(value);","time":1594304882851,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":5}
+7-break-insert "/home/ubuntu/pset4/filter/helpers.c:128"
+
+GDB: 7^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042889a",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="128",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:128"}
+SENDING: Content-Length:336
+
+{"_seq":"7","state":"done","status":{"bkpt":{"number":"3","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x000000000042889a","func":"blur","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"128","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:128"}},"_id":5}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":6}
+8-exec-continue 
+
+GDB: 8^running
+SENDING: Content-Length:50
+
+{"_seq":"8","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7bbbbb0",to="0x00007ffff7bca0f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff79b0200",to="0x00007ffff79b370c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff761ba80",to="0x00007ffff76da2f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff740ce50",to="0x00007ffff740dbde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71f6ac0",to="0x00007ffff72073fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6e242d0",to="0x00007ffff6f9cc3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+helpers.c:110:24: runtime error: index -1 out of bounds for type 'RGBTRIPLE [width]'
+
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGSEGV, Segmentation fault.\n"
+GDB: ~"0x0000000000426cf5 in blur (height=400, width=600, image=0x7ffff7f2d010) at helpers.c:110\n"
+GDB: ~"110\t            value[0] = image[i - 1][j - 1];\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGSEGV",signal-meaning="Segmentation fault",frame={addr="0x0000000000426cf5",func="blur",args=[{name="height",value="400"},{name="width",value="600"},{name="image",value="0x7ffff7f2d010"}],file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},thread-id="1",stopped-threads="all",core="15"
+9-stack-list-frames 0 50
+
+GDB: 9^done,stack=[frame={level="0",addr="0x0000000000426cf5",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},frame={level="1",addr="0x0000000000423242",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="105"}]
+10-stack-list-arguments --simple-values 0 50
+
+GDB: 10^done,stack-args=[frame={level="0",args=[{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"}]},frame={level="1",args=[{name="argc",type="int",value="4"},{name="argv",type="char **",value="0x7fffffffe6d8"}]}]
+11-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 11^done,locals=[{name="filters",type="char *",value="0x431994 \"bgrs\""},{name="filter",type="char",value="98 'b'"},{name="infile",type="char *",value="0x7fffffffe9ec \"images/yard.bmp\""},{name="outfile",type="char *",value="0x7fffffffe9fc \"out.bmp\""},{name="inptr",type="FILE *",value="0xed1290"},{name="outptr",type="FILE *",value="0xed14c0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"},{name="padding",type="int",value="0"}]
+12-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 12^done,locals=[{name="value",type="RGBTRIPLE [9]"},{name="avg",type="int",value="0"},{name="j",type="int",value="0"},{name="i",type="int",value="0"}]
+13-var-update --all-values *
+
+GDB: 13^done,changelist=[]
+14-var-create - * padding
+
+GDB: 14^error,msg="-var-create: unable to create variable object"
+15-var-create - * image
+
+GDB: 15^done,name="var2",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+16-var-create - * width
+
+GDB: 16^done,name="var3",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+17-var-create - * height
+
+GDB: 17^done,name="var4",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+18-var-create - * bi
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * bf
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * outptr
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * inptr
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * outfile
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * infile
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * filter
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * filters
+
+GDB: 25^error,msg="-var-create: unable to create variable object"
+26-var-create - * argv
+
+GDB: 26^error,msg="-var-create: unable to create variable object"
+27-var-create - * argc
+
+GDB: 27^error,msg="-var-create: unable to create variable object"
+28-var-create - * i
+
+GDB: 28^done,name="var15",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+29-var-create - * j
+
+GDB: 29^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+30-var-create - * avg
+
+GDB: 30^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+31-var-create - * value
+
+GDB: 31^done,name="var18",numchild="9",value="[9]",type="RGBTRIPLE [9]",thread-id="1",has_more="0"
+32-var-create - * image
+
+GDB: 32^done,name="var19",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+33-var-create - * width
+
+GDB: 33^done,name="var20",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+34-var-create - * height
+
+GDB: 34^done,name="var21",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1956
+
+{"err":"signal","signal":{"name":"SIGSEGV","text":"Segmentation fault"},"thread":"1","frames":[{"level":"0","addr":"0x0000000000426cf5","func":"blur","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"110","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var21","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var20","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var19","numchild":"1"}],"locals":[{"name":"value","type":"RGBTRIPLE [9]","objname":"var18","numchild":"9"},{"name":"avg","type":"int","value":"0","objname":"var17","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var15","numchild":"0"}]},{"level":"1","addr":"0x0000000000423242","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"105","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argv","type":"char **","value":"0x7fffffffe6d8","address":140737488348888}],"locals":[{"name":"filters","type":"char *","value":"0x431994 \"bgrs\"","address":4397460},{"name":"filter","type":"char","value":"98 'b'"},{"name":"infile","type":"char *","value":"0x7fffffffe9ec \"images/yard.bmp\"","address":140737488349676},{"name":"outfile","type":"char *","value":"0x7fffffffe9fc \"out.bmp\"","address":140737488349692},{"name":"inptr","type":"FILE *","value":"0xed1290","address":15536784},{"name":"outptr","type":"FILE *","value":"0xed14c0","address":15537344},{"name":"bf","type":"BITMAPFILEHEADER"},{"name":"bi","type":"BITMAPINFOHEADER"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"padding","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":7}
+35-exec-step 
+
+GDB: 35^running
+SENDING: Content-Length:51
+
+{"_seq":"35","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000422860",func="__ubsan::UBsanOnDeadlySignal(int, void*, void*)",args=[],file="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",fullname="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",line="50"},thread-id="1",stopped-threads="all",core="15"
+36-stack-list-frames 0 50
+
+GDB: 36^done,stack=[frame={level="0",addr="0x0000000000422860",func="__ubsan::UBsanOnDeadlySignal(int, void*, void*)",file="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",fullname="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",line="50"},frame={level="1",addr="0x00007ffff7bc8890",func="<signal handler called>"},frame={level="2",addr="0x0000000000426cf5",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},frame={level="3",addr="0x0000000000423242",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="105"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+UndefinedBehaviorSanitizer:DEADLYSIGNAL
+
+==3357==ERROR: UndefinedBehaviorSanitizer: SEGV on unknown address 0x7ffff7f2c905 (pc 0x000000426cf5 bp 0x7fffffffe360 sp 0x7fffffffdbd0 T3357)
+==3357==The signal is caused by a READ memory access.
+
+    #0 0x426cf4  (/home/ubuntu/pset4/filter/filter+0x426cf4)
+    #1 0x423241  (/home/ubuntu/pset4/filter/filter+0x423241)
+    #2 0x7ffff6e24b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+    #3 0x402d69  (/home/ubuntu/pset4/filter/filter+0x402d69)
+
+UndefinedBehaviorSanitizer can not provide additional info.
+==3357==ABORTING
+
+
+Child exited with status 1
+
+GDB: ~"[Inferior 1 (process 3357) exited with code 01]\n"
+GDB: =thread-group-exited,id="i1",exit-code="01"
+GDB: *stopped,reason="exited",exit-code="01"
+GDB server terminated with code 0 and signal null
+
+
+Thu Jul 09 2020 14:33:01 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./filter..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="3579"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="4"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:211
+
+{"path":"/pset3/runoff/runoff.c","line":152,"column":12,"text":"runoff.c","content":"            {","time":1592730352279,"enabled":true,"fullpath":"/home/ubuntu/pset3/runoff/runoff.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/runoff/runoff.c:153"
+
+GDB: 4^error,msg="No source file named /home/ubuntu/pset3/runoff/runoff.c."
+SENDING: Content-Length:112
+
+{"_seq":"4","state":"error","status":{"msg":"No source file named /home/ubuntu/pset3/runoff/runoff.c."},"_id":2}
+PLUGIN: Content-Length:249
+
+{"path":"/pset4/filter/helpers.c","line":14,"column":12,"text":"helpers.c","content":"            RGBTRIPLE avg = image[i][j];","time":1594222250138,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":3,"id":"1"}
+5-break-insert "/home/ubuntu/pset4/filter/helpers.c:15"
+
+GDB: 5^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000423672",func="grayscale",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="15",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:15"}
+SENDING: Content-Length:339
+
+{"_seq":"5","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000423672","func":"grayscale","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"15","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:15"}},"_id":3}
+PLUGIN: Content-Length:241
+
+{"path":"/pset4/filter/helpers.c","line":87,"column":12,"text":"helpers.c","content":"            int myWidth = width;","time":1594304230955,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":4,"id":"2"}
+6-break-insert "/home/ubuntu/pset4/filter/helpers.c:88"
+
+GDB: 6^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000425b39",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="88",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:88"}
+SENDING: Content-Length:337
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000425b39","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"88","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:88"}},"_id":4}
+PLUGIN: Content-Length:248
+
+{"path":"/pset4/filter/helpers.c","line":127,"column":12,"text":"helpers.c","content":"            avg = avg / sizeof(value);","time":1594304882851,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":5,"id":"3"}
+7-break-insert "/home/ubuntu/pset4/filter/helpers.c:128"
+
+GDB: 7^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042889a",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="128",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:128"}
+SENDING: Content-Length:336
+
+{"_seq":"7","state":"done","status":{"bkpt":{"number":"3","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x000000000042889a","func":"blur","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"128","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:128"}},"_id":5}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":6}
+8-exec-continue 
+
+GDB: 8^running
+SENDING: Content-Length:50
+
+{"_seq":"8","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7bbbbb0",to="0x00007ffff7bca0f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff79b0200",to="0x00007ffff79b370c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff761ba80",to="0x00007ffff76da2f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff740ce50",to="0x00007ffff740dbde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71f6ac0",to="0x00007ffff72073fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6e242d0",to="0x00007ffff6f9cc3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+helpers.c:110:24: runtime error: index -1 out of bounds for type 'RGBTRIPLE [width]'
+
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGSEGV, Segmentation fault.\n"
+GDB: ~"0x0000000000426cf5 in blur (height=400, width=600, image=0x7ffff7f2d010) at helpers.c:110\n"
+GDB: ~"110\t            value[0] = image[i - 1][j - 1];\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGSEGV",signal-meaning="Segmentation fault",frame={addr="0x0000000000426cf5",func="blur",args=[{name="height",value="400"},{name="width",value="600"},{name="image",value="0x7ffff7f2d010"}],file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},thread-id="1",stopped-threads="all",core="4"
+9-stack-list-frames 0 50
+
+GDB: 9^done,stack=[frame={level="0",addr="0x0000000000426cf5",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},frame={level="1",addr="0x0000000000423242",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="105"}]
+10-stack-list-arguments --simple-values 0 50
+
+GDB: 10^done,stack-args=[frame={level="0",args=[{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"}]},frame={level="1",args=[{name="argc",type="int",value="4"},{name="argv",type="char **",value="0x7fffffffe6d8"}]}]
+11-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 11^done,locals=[{name="filters",type="char *",value="0x431994 \"bgrs\""},{name="filter",type="char",value="98 'b'"},{name="infile",type="char *",value="0x7fffffffe9ec \"images/yard.bmp\""},{name="outfile",type="char *",value="0x7fffffffe9fc \"out.bmp\""},{name="inptr",type="FILE *",value="0xed1290"},{name="outptr",type="FILE *",value="0xed14c0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"},{name="padding",type="int",value="0"}]
+12-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 12^done,locals=[{name="value",type="RGBTRIPLE [9]"},{name="avg",type="int",value="0"},{name="j",type="int",value="0"},{name="i",type="int",value="0"}]
+13-var-update --all-values *
+
+GDB: 13^done,changelist=[]
+14-var-create - * padding
+
+GDB: 14^error,msg="-var-create: unable to create variable object"
+15-var-create - * image
+
+GDB: 15^done,name="var2",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+16-var-create - * width
+
+GDB: 16^done,name="var3",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+17-var-create - * height
+
+GDB: 17^done,name="var4",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+18-var-create - * bi
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * bf
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * outptr
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * inptr
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * outfile
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * infile
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * filter
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * filters
+
+GDB: 25^error,msg="-var-create: unable to create variable object"
+26-var-create - * argv
+
+GDB: 26^error,msg="-var-create: unable to create variable object"
+27-var-create - * argc
+
+GDB: 27^error,msg="-var-create: unable to create variable object"
+28-var-create - * i
+
+GDB: 28^done,name="var15",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+29-var-create - * j
+
+GDB: 29^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+30-var-create - * avg
+
+GDB: 30^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+31-var-create - * value
+
+GDB: 31^done,name="var18",numchild="9",value="[9]",type="RGBTRIPLE [9]",thread-id="1",has_more="0"
+32-var-create - * image
+
+GDB: 32^done,name="var19",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+33-var-create - * width
+
+GDB: 33^done,name="var20",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+34-var-create - * height
+
+GDB: 34^done,name="var21",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1956
+
+{"err":"signal","signal":{"name":"SIGSEGV","text":"Segmentation fault"},"thread":"1","frames":[{"level":"0","addr":"0x0000000000426cf5","func":"blur","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"110","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var21","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var20","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var19","numchild":"1"}],"locals":[{"name":"value","type":"RGBTRIPLE [9]","objname":"var18","numchild":"9"},{"name":"avg","type":"int","value":"0","objname":"var17","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var15","numchild":"0"}]},{"level":"1","addr":"0x0000000000423242","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"105","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argv","type":"char **","value":"0x7fffffffe6d8","address":140737488348888}],"locals":[{"name":"filters","type":"char *","value":"0x431994 \"bgrs\"","address":4397460},{"name":"filter","type":"char","value":"98 'b'"},{"name":"infile","type":"char *","value":"0x7fffffffe9ec \"images/yard.bmp\"","address":140737488349676},{"name":"outfile","type":"char *","value":"0x7fffffffe9fc \"out.bmp\"","address":140737488349692},{"name":"inptr","type":"FILE *","value":"0xed1290","address":15536784},{"name":"outptr","type":"FILE *","value":"0xed14c0","address":15537344},{"name":"bf","type":"BITMAPFILEHEADER"},{"name":"bi","type":"BITMAPINFOHEADER"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"padding","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":7}
+35-exec-step 
+
+GDB: 35^running
+SENDING: Content-Length:51
+
+{"_seq":"35","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000422860",func="__ubsan::UBsanOnDeadlySignal(int, void*, void*)",args=[],file="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",fullname="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",line="50"},thread-id="1",stopped-threads="all",core="4"
+36-stack-list-frames 0 50
+
+GDB: 36^done,stack=[frame={level="0",addr="0x0000000000422860",func="__ubsan::UBsanOnDeadlySignal(int, void*, void*)",file="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",fullname="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",line="50"},frame={level="1",addr="0x00007ffff7bc8890",func="<signal handler called>"},frame={level="2",addr="0x0000000000426cf5",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},frame={level="3",addr="0x0000000000423242",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="105"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+UndefinedBehaviorSanitizer:DEADLYSIGNAL
+
+==3579==ERROR: UndefinedBehaviorSanitizer: SEGV on unknown address 0x7ffff7f2c905 (pc 0x000000426cf5 bp 0x7fffffffe360 sp 0x7fffffffdbd0 T3579)
+==3579==The signal is caused by a READ memory access.
+
+    #0 0x426cf4  (/home/ubuntu/pset4/filter/filter+0x426cf4)
+    #1 0x423241  (/home/ubuntu/pset4/filter/filter+0x423241)
+    #2 0x7ffff6e24b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #3 0x402d69  (/home/ubuntu/pset4/filter/filter+0x402d69)
+
+
+UndefinedBehaviorSanitizer can not provide additional info.
+==3579==ABORTING
+
+
+Child exited with status 1
+
+GDB: ~"[Inferior 1 (process 3579) exited with code 01]\n"
+GDB: =thread-group-exited,id="i1",exit-code="01"
+GDB: *stopped,reason="exited",exit-code="01"
+GDB server terminated with code 0 and signal null
+
+
+Thu Jul 09 2020 14:33:25 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./filter..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="3740"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="1"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:211
+
+{"path":"/pset3/runoff/runoff.c","line":152,"column":12,"text":"runoff.c","content":"            {","time":1592730352279,"enabled":true,"fullpath":"/home/ubuntu/pset3/runoff/runoff.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/runoff/runoff.c:153"
+
+GDB: 4^error,msg="No source file named /home/ubuntu/pset3/runoff/runoff.c."
+SENDING: Content-Length:112
+
+{"_seq":"4","state":"error","status":{"msg":"No source file named /home/ubuntu/pset3/runoff/runoff.c."},"_id":2}
+PLUGIN: Content-Length:249
+
+{"path":"/pset4/filter/helpers.c","line":14,"column":12,"text":"helpers.c","content":"            RGBTRIPLE avg = image[i][j];","time":1594222250138,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":3,"id":"1"}
+5-break-insert "/home/ubuntu/pset4/filter/helpers.c:15"
+
+GDB: 5^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000423672",func="grayscale",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="15",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:15"}
+SENDING: Content-Length:339
+
+{"_seq":"5","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000423672","func":"grayscale","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"15","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:15"}},"_id":3}
+PLUGIN: Content-Length:241
+
+{"path":"/pset4/filter/helpers.c","line":87,"column":12,"text":"helpers.c","content":"            int myWidth = width;","time":1594304230955,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":4,"id":"2"}
+6-break-insert "/home/ubuntu/pset4/filter/helpers.c:88"
+
+GDB: 6^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000425b39",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="88",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:88"}
+SENDING: Content-Length:337
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000425b39","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"88","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:88"}},"_id":4}
+PLUGIN: Content-Length:248
+
+{"path":"/pset4/filter/helpers.c","line":127,"column":12,"text":"helpers.c","content":"            avg = avg / sizeof(value);","time":1594304882851,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":5,"id":"3"}
+7-break-insert "/home/ubuntu/pset4/filter/helpers.c:128"
+
+GDB: 7^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042889a",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="128",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:128"}
+SENDING: Content-Length:336
+
+{"_seq":"7","state":"done","status":{"bkpt":{"number":"3","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x000000000042889a","func":"blur","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"128","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:128"}},"_id":5}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":6}
+8-exec-continue 
+
+GDB: 8^running
+SENDING: Content-Length:50
+
+{"_seq":"8","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7bbbbb0",to="0x00007ffff7bca0f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff79b0200",to="0x00007ffff79b370c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff761ba80",to="0x00007ffff76da2f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff740ce50",to="0x00007ffff740dbde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71f6ac0",to="0x00007ffff72073fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6e242d0",to="0x00007ffff6f9cc3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+helpers.c:110:24: runtime error: index -1 out of bounds for type 'RGBTRIPLE [width]'
+
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGSEGV, Segmentation fault.\n"
+GDB: ~"0x0000000000426cf5 in blur (height=400, width=600, image=0x7ffff7f2d010) at helpers.c:110\n"
+GDB: ~"110\t            value[0] = image[i - 1][j - 1];\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGSEGV",signal-meaning="Segmentation fault",frame={addr="0x0000000000426cf5",func="blur",args=[{name="height",value="400"},{name="width",value="600"},{name="image",value="0x7ffff7f2d010"}],file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},thread-id="1",stopped-threads="all",core="7"
+9-stack-list-frames 0 50
+
+GDB: 9^done,stack=[frame={level="0",addr="0x0000000000426cf5",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},frame={level="1",addr="0x0000000000423242",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="105"}]
+10-stack-list-arguments --simple-values 0 50
+
+GDB: 10^done,stack-args=[frame={level="0",args=[{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"}]},frame={level="1",args=[{name="argc",type="int",value="4"},{name="argv",type="char **",value="0x7fffffffe6d8"}]}]
+11-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 11^done,locals=[{name="filters",type="char *",value="0x431994 \"bgrs\""},{name="filter",type="char",value="98 'b'"},{name="infile",type="char *",value="0x7fffffffe9ec \"images/yard.bmp\""},{name="outfile",type="char *",value="0x7fffffffe9fc \"out.bmp\""},{name="inptr",type="FILE *",value="0xed1290"},{name="outptr",type="FILE *",value="0xed14c0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"},{name="padding",type="int",value="0"}]
+12-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 12^done,locals=[{name="value",type="RGBTRIPLE [9]"},{name="avg",type="int",value="0"},{name="j",type="int",value="0"},{name="i",type="int",value="0"}]
+13-var-update --all-values *
+
+GDB: 13^done,changelist=[]
+14-var-create - * padding
+
+GDB: 14^error,msg="-var-create: unable to create variable object"
+15-var-create - * image
+
+GDB: 15^done,name="var2",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+16-var-create - * width
+
+GDB: 16^done,name="var3",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+17-var-create - * height
+
+GDB: 17^done,name="var4",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+18-var-create - * bi
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * bf
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * outptr
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * inptr
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * outfile
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * infile
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * filter
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * filters
+
+GDB: 25^error,msg="-var-create: unable to create variable object"
+26-var-create - * argv
+
+GDB: 26^error,msg="-var-create: unable to create variable object"
+27-var-create - * argc
+
+GDB: 27^error,msg="-var-create: unable to create variable object"
+28-var-create - * i
+
+GDB: 28^done,name="var15",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+29-var-create - * j
+
+GDB: 29^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+30-var-create - * avg
+
+GDB: 30^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+31-var-create - * value
+
+GDB: 31^done,name="var18",numchild="9",value="[9]",type="RGBTRIPLE [9]",thread-id="1",has_more="0"
+32-var-create - * image
+
+GDB: 32^done,name="var19",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+33-var-create - * width
+
+GDB: 33^done,name="var20",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+34-var-create - * height
+
+GDB: 34^done,name="var21",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1956
+
+{"err":"signal","signal":{"name":"SIGSEGV","text":"Segmentation fault"},"thread":"1","frames":[{"level":"0","addr":"0x0000000000426cf5","func":"blur","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"110","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var21","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var20","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var19","numchild":"1"}],"locals":[{"name":"value","type":"RGBTRIPLE [9]","objname":"var18","numchild":"9"},{"name":"avg","type":"int","value":"0","objname":"var17","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var15","numchild":"0"}]},{"level":"1","addr":"0x0000000000423242","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"105","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argv","type":"char **","value":"0x7fffffffe6d8","address":140737488348888}],"locals":[{"name":"filters","type":"char *","value":"0x431994 \"bgrs\"","address":4397460},{"name":"filter","type":"char","value":"98 'b'"},{"name":"infile","type":"char *","value":"0x7fffffffe9ec \"images/yard.bmp\"","address":140737488349676},{"name":"outfile","type":"char *","value":"0x7fffffffe9fc \"out.bmp\"","address":140737488349692},{"name":"inptr","type":"FILE *","value":"0xed1290","address":15536784},{"name":"outptr","type":"FILE *","value":"0xed14c0","address":15537344},{"name":"bf","type":"BITMAPFILEHEADER"},{"name":"bi","type":"BITMAPINFOHEADER"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"padding","type":"int","value":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":7}
+35-exec-next 
+
+GDB: 35^running
+SENDING: Content-Length:51
+
+{"_seq":"35","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000422860",func="__ubsan::UBsanOnDeadlySignal(int, void*, void*)",args=[],file="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",fullname="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",line="50"},thread-id="1",stopped-threads="all",core="10"
+36-stack-list-frames 0 50
+
+GDB: 36^done,stack=[frame={level="0",addr="0x0000000000422860",func="__ubsan::UBsanOnDeadlySignal(int, void*, void*)",file="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",fullname="/home/buildnode/jenkins/workspace/oss-swift-5.1-package-linux-ubuntu-18_04/llvm/projects/compiler-rt/lib/ubsan/ubsan_signals_standalone.cc",line="50"},frame={level="1",addr="0x00007ffff7bc8890",func="<signal handler called>"},frame={level="2",addr="0x0000000000426cf5",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},frame={level="3",addr="0x0000000000423242",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="105"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+UndefinedBehaviorSanitizer:DEADLYSIGNAL
+
+==3740==ERROR: UndefinedBehaviorSanitizer: SEGV on unknown address 0x7ffff7f2c905 (pc 0x000000426cf5 bp 0x7fffffffe360 sp 0x7fffffffdbd0 T3740)
+==3740==The signal is caused by a READ memory access.
+
+    #0 0x426cf4  (/home/ubuntu/pset4/filter/filter+0x426cf4)
+    #1 0x423241  (/home/ubuntu/pset4/filter/filter+0x423241)
+    #2 0x7ffff6e24b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+    #3 0x402d69  (/home/ubuntu/pset4/filter/filter+0x402d69)
+
+UndefinedBehaviorSanitizer can not provide additional info.
+==3740==ABORTING
+
+
+Child exited with status 1
+
+GDB: ~"[Inferior 1 (process 3740) exited with code 01]\n"
+GDB: =thread-group-exited,id="i1",exit-code="01"
+GDB: *stopped,reason="exited",exit-code="01"
+GDB server terminated with code 0 and signal null
+
+
+Thu Jul 09 2020 14:34:02 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./filter..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="3955"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="5"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:211
+
+{"path":"/pset3/runoff/runoff.c","line":152,"column":12,"text":"runoff.c","content":"            {","time":1592730352279,"enabled":true,"fullpath":"/home/ubuntu/pset3/runoff/runoff.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/runoff/runoff.c:153"
+
+GDB: 4^error,msg="No source file named /home/ubuntu/pset3/runoff/runoff.c."
+SENDING: Content-Length:112
+
+{"_seq":"4","state":"error","status":{"msg":"No source file named /home/ubuntu/pset3/runoff/runoff.c."},"_id":2}
+PLUGIN: Content-Length:249
+
+{"path":"/pset4/filter/helpers.c","line":14,"column":12,"text":"helpers.c","content":"            RGBTRIPLE avg = image[i][j];","time":1594222250138,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":3,"id":"1"}
+5-break-insert "/home/ubuntu/pset4/filter/helpers.c:15"
+
+GDB: 5^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000423672",func="grayscale",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="15",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:15"}
+SENDING: Content-Length:339
+
+{"_seq":"5","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000423672","func":"grayscale","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"15","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:15"}},"_id":3}
+PLUGIN: Content-Length:241
+
+{"path":"/pset4/filter/helpers.c","line":87,"column":12,"text":"helpers.c","content":"            int myWidth = width;","time":1594304230955,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":4,"id":"2"}
+6-break-insert "/home/ubuntu/pset4/filter/helpers.c:88"
+
+GDB: 6^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000425b39",func="reflect",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="88",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:88"}
+SENDING: Content-Length:337
+
+{"_seq":"6","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000425b39","func":"reflect","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"88","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:88"}},"_id":4}
+PLUGIN: Content-Length:288
+
+{"path":"/pset4/filter/helpers.c","line":126,"column":16,"text":"helpers.c","content":"                avg += (value[k].rgbtBlue + value[k].rgbtGreen + value[k].rgbtRed) / 3;","time":1594305231678,"enabled":true,"fullpath":"/home/ubuntu/pset4/filter/helpers.c","command":"bp-set","_id":5}
+7-break-insert "/home/ubuntu/pset4/filter/helpers.c:127"
+
+GDB: 7^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042835f",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="127",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset4/filter/helpers.c:127"}
+SENDING: Content-Length:336
+
+{"_seq":"7","state":"done","status":{"bkpt":{"number":"3","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x000000000042835f","func":"blur","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"127","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset4/filter/helpers.c:127"}},"_id":5}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":6}
+8-exec-continue 
+
+GDB: 8^running
+SENDING: Content-Length:50
+
+{"_seq":"8","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7bbbbb0",to="0x00007ffff7bca0f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff79b0200",to="0x00007ffff79b370c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff761ba80",to="0x00007ffff76da2f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff740ce50",to="0x00007ffff740dbde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71f6ac0",to="0x00007ffff72073fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6e242d0",to="0x00007ffff6f9cc3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+helpers.c:110:24: runtime error: index -1 out of bounds for type 'RGBTRIPLE [width]'
+
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGSEGV, Segmentation fault.\n"
+GDB: ~"0x0000000000426cf5 in blur (height=400, width=600, image=0x7ffff7f2d010) at helpers.c:110\n"
+GDB: ~"110\t            value[0] = image[i - 1][j - 1];\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGSEGV",signal-meaning="Segmentation fault",frame={addr="0x0000000000426cf5",func="blur",args=[{name="height",value="400"},{name="width",value="600"},{name="image",value="0x7ffff7f2d010"}],file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},thread-id="1",stopped-threads="all",core="11"
+9-stack-list-frames 0 50
+
+GDB: 9^done,stack=[frame={level="0",addr="0x0000000000426cf5",func="blur",file="helpers.c",fullname="/home/ubuntu/pset4/filter/helpers.c",line="110"},frame={level="1",addr="0x0000000000423242",func="main",file="filter.c",fullname="/home/ubuntu/pset4/filter/filter.c",line="105"}]
+10-stack-list-arguments --simple-values 0 50
+
+GDB: 10^done,stack-args=[frame={level="0",args=[{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"}]},frame={level="1",args=[{name="argc",type="int",value="4"},{name="argv",type="char **",value="0x7fffffffe6d8"}]}]
+11-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 11^done,locals=[{name="filters",type="char *",value="0x431994 \"bgrs\""},{name="filter",type="char",value="98 'b'"},{name="infile",type="char *",value="0x7fffffffe9ec \"images/yard.bmp\""},{name="outfile",type="char *",value="0x7fffffffe9fc \"out.bmp\""},{name="inptr",type="FILE *",value="0xed1290"},{name="outptr",type="FILE *",value="0xed14c0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="height",type="int",value="400"},{name="width",type="int",value="600"},{name="image",type="RGBTRIPLE (*)[]",value="0x7ffff7f2d010"},{name="padding",type="int",value="0"}]
+12-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 12^done,locals=[{name="value",type="RGBTRIPLE [9]"},{name="avg",type="int",value="0"},{name="j",type="int",value="0"},{name="i",type="int",value="0"}]
+13-var-update --all-values *
+
+GDB: 13^done,changelist=[]
+14-var-create - * padding
+
+GDB: 14^error,msg="-var-create: unable to create variable object"
+15-var-create - * image
+
+GDB: 15^done,name="var2",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+16-var-create - * width
+
+GDB: 16^done,name="var3",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+17-var-create - * height
+
+GDB: 17^done,name="var4",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+18-var-create - * bi
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * bf
+
+GDB: 19^error,msg="-var-create: unable to create variable object"
+20-var-create - * outptr
+
+GDB: 20^error,msg="-var-create: unable to create variable object"
+21-var-create - * inptr
+
+GDB: 21^error,msg="-var-create: unable to create variable object"
+22-var-create - * outfile
+
+GDB: 22^error,msg="-var-create: unable to create variable object"
+23-var-create - * infile
+
+GDB: 23^error,msg="-var-create: unable to create variable object"
+24-var-create - * filter
+
+GDB: 24^error,msg="-var-create: unable to create variable object"
+25-var-create - * filters
+
+GDB: 25^error,msg="-var-create: unable to create variable object"
+26-var-create - * argv
+
+GDB: 26^error,msg="-var-create: unable to create variable object"
+27-var-create - * argc
+
+GDB: 27^error,msg="-var-create: unable to create variable object"
+28-var-create - * i
+
+GDB: 28^done,name="var15",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+29-var-create - * j
+
+GDB: 29^done,name="var16",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+30-var-create - * avg
+
+GDB: 30^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+31-var-create - * value
+
+GDB: 31^done,name="var18",numchild="9",value="[9]",type="RGBTRIPLE [9]",thread-id="1",has_more="0"
+32-var-create - * image
+
+GDB: 32^done,name="var19",numchild="1",value="0x7ffff7f2d010",type="RGBTRIPLE (*)[]",thread-id="1",has_more="0"
+33-var-create - * width
+
+GDB: 33^done,name="var20",numchild="0",value="600",type="int",thread-id="1",has_more="0"
+34-var-create - * height
+
+GDB: 34^done,name="var21",numchild="0",value="400",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1956
+
+{"err":"signal","signal":{"name":"SIGSEGV","text":"Segmentation fault"},"thread":"1","frames":[{"level":"0","addr":"0x0000000000426cf5","func":"blur","file":"helpers.c","fullname":"/home/ubuntu/pset4/filter/helpers.c","line":"110","exists":true,"args":[{"name":"height","type":"int","value":"400","objname":"var21","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var20","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var19","numchild":"1"}],"locals":[{"name":"value","type":"RGBTRIPLE [9]","objname":"var18","numchild":"9"},{"name":"avg","type":"int","value":"0","objname":"var17","numchild":"0"},{"name":"j","type":"int","value":"0","objname":"var16","numchild":"0"},{"name":"i","type":"int","value":"0","objname":"var15","numchild":"0"}]},{"level":"1","addr":"0x0000000000423242","func":"main","file":"filter.c","fullname":"/home/ubuntu/pset4/filter/filter.c","line":"105","exists":true,"args":[{"name":"argc","type":"int","value":"4"},{"name":"argv","type":"char **","value":"0x7fffffffe6d8","address":140737488348888}],"locals":[{"name":"filters","type":"char *","value":"0x431994 \"bgrs\"","address":4397460},{"name":"filter","type":"char","value":"98 'b'"},{"name":"infile","type":"char *","value":"0x7fffffffe9ec \"images/yard.bmp\"","address":140737488349676},{"name":"outfile","type":"char *","value":"0x7fffffffe9fc \"out.bmp\"","address":140737488349692},{"name":"inptr","type":"FILE *","value":"0xed1290","address":15536784},{"name":"outptr","type":"FILE *","value":"0xed14c0","address":15537344},{"name":"bf","type":"BITMAPFILEHEADER"},{"name":"bi","type":"BITMAPINFOHEADER"},{"name":"height","type":"int","value":"400","objname":"var4","numchild":"0"},{"name":"width","type":"int","value":"600","objname":"var3","numchild":"0"},{"name":"image","type":"RGBTRIPLE (*)[]","value":"0x7ffff7f2d010","objname":"var2","numchild":"1"},{"name":"padding","type":"int","value":"0"}]}]}
+GDB: ^done
+SIGINT

@@ -1,54 +1,3 @@
-./substitution
-make substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-debug50 substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-debug50 substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-debug50 substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-debug50 substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-debug50 substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-debug50 substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-debug50 substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-debug50 substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-clear
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-cd pset1/substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-clear
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
 make substitution
 make substitution
 make substitution
@@ -544,3 +493,59 @@ make filter
 ./filter -g images/yard.bmp out.bmp
 git add .
 cd
+git add .
+git commit -m "filter grayscale"
+git push origin master
+git push origin master
+exit
+cd pset4/filter
+make filter
+ ./filter -g images/yard.bmp out.bmp
+ ./filter -s images/yard.bmp out.bmp
+make filter
+ ./filter -s images/yard.bmp out.bmp
+make filter
+ ./filter -r images/yard.bmp out.bmp
+debug50  ./filter -r images/yard.bmp out.bmp
+make filter
+debug50  ./filter -r images/yard.bmp out.bmp
+make filter
+make filter
+debug50  ./filter -r images/yard.bmp out.bmp
+make filter
+ ./filter -r images/yard.bmp out.bmp
+make filter
+ ./filter -r images/yard.bmp out.bmp
+make filter
+ ./filter -r images/yard.bmp out.bmp
+make filter
+ ./filter -r images/yard.bmp out.bmp
+make filter
+debug50  ./filter -r images/yard.bmp out.bmp
+make filter
+ ./filter -r images/yard.bmp out.bmp
+make filter
+ ./filter -r images/yard.bmp out.bmp
+make filter
+ ./filter -r images/yard.bmp out.bmp
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+make filter
+debug50  ./filter -r images/yard.bmp out.bmp
+debug50  ./filter -b images/yard.bmp out.bmp
+debug50  ./filter -b images/yard.bmp out.bmp
+debug50  ./filter -b images/yard.bmp out.bmp
+make filter
+debug50  ./filter -b images/yard.bmp out.bmp
+git add .
+cd
+git add 

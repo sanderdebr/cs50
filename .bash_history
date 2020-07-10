@@ -1,149 +1,3 @@
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-make substitution
-make substitution
-./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
-check50 cs50/problems/2020/x/substitution
-make substitution
-make substitution
-./substitution ZWGKPMJRYISHFEXQON2DLUACVT
-make substitution
-./substitution ZWGKPMJRYISHFEXQON2DLUACVT
-make substitution
-make substitution
-./substitution ZWGKPMJRYISHFEXQON2DLUACVVT
-./substitution ZWGKPMJRYISHFEXQON2DLUACVV
-./substitution ZWGKPMJRYISHFEXQONCDLUACVV
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBB
-make substitution
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCBA
-./substitution ZYXWVUTSRQPONMLKJIHGFEDCB1
-check50 cs50/problems/2020/x/substitution
-check50 cs50/problems/2020/x/substitution
-style50 substitution.c
-style50 substitution.c
-submit50 cs50/problems/2020/x/substitution
-cd pset1
-mkdir readability
-touch readability.c
-rm readability.c
-cd readability
-touch readability.c
-clear
-make readability
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-./readability
-./readability
-make readability
-make readability
-make readability
-./readability
-./readability
-./readability
-clear
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-check50 cs50/problems/2020/x/readability
-clear
-./readability
-make readability
-make readability
-clear
-./readability
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-./readability
-clear
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-make readability
-./readability
-make readability
-make readability
-make readability
-make readability
-./readability
-make readability
-make readability
-./readability
-make readability
-./readability
-make readability
-make readability
-./readability
-make readability
-./readability
-make readability
-make readability
-./readability
-./readability
-make readability
-make readability
-./readability
 ./readability
 ./readability
 check50 cs50/problems/2020/x/readability
@@ -640,4 +494,80 @@ make filter
 make filter
 ./filter -r ./images/stadium.bmp out.bmp
 make filter
+cd
+git add .
+git commit -m "stuck on reflection"
+git push origin master
+cd pset4/filter
+make filter
+./filter -rg images/yard.bmp out.bmp
+./filter -r images/yard.bmp out.bmp
+./filter -rg images/yard.bmp out.bmp
+make filter
+./filter -r images/yard.bmp out.bmp
+check50 cs50/problems/2020/x/filter/less
+check50 cs50/problems/2020/x/filter/less
+make filter
+make filter
+./filter -b images/yard.bmp out.bmp
+check50 cs50/problems/2020/x/filter/less
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+debug50 ./filter -b images/yard.bmp out.bmp
+debug50 ./filter -b images/yard.bmp out.bmp
+debug50 ./filter -b images/yard.bmp out.bmp
+debug50 ./filter -b images/yard.bmp out.bmp
+debug50 ./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+./filter -b images/yard.bmp out.bmp
+make filter
+debug50 ./filter -b images/yard.bmp out.bmp
+debug50 ./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+check50 cs50/problems/2020/x/filter/less
+make filter
+./filter -b images/yard.bmp out.bmp
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+make filter
+./filter -b images/yard.bmp out.bmp
+check50 cs50/problems/2020/x/filter/less
+make filter
+./filter -b images/yard.bmp out.bmp
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+make filter
+check50 cs50/problems/2020/x/filter/less
+style50 helpers.c
+submit50 cs50/problems/2020/x/filter/less
+style50 helpers.c
+make filter
+style50 helpers.c
+make filter
+style50 helpers.c
+make filter
+style50 helpers.c
 cd

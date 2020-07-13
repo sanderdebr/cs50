@@ -1,79 +1,3 @@
-./readability
-./readability
-check50 cs50/problems/2020/x/readability
-check50 cs50/problems/2020/x/readability
-check50 cs50/problems/2020/x/readability
-style50 readability.c
-git add .
-git commit -m 'week 2 done!'
-git remote -v
-git push origin master
-submit50 cs50/problems/2020/x/readability
-cd ..
-cd ..
-mkdir pset2
-cd pset1
-move readability ~/pset2/
-mv readability ~/pset2/
-mv substitution ~/pset2/
-git add .
-git commit -m 'new folder structure'
-git push origin master
-git push origin master
-cd ..
-cd //
-cd 
-git add .
-git commit -m 'new folder structure'
-git push origin master
-cd
-cd pset3
-mkdir pset3
-cd pset3
-mkdur runoff
-mkdir runoff
-mkdir plurality
-cd plurality
-wget https://cdn.cs50.net/2019/fall/psets/3/plurality/plurality.c
-ls
-cd pset3/plurality
-make plurality
-./plurality
-plurality Alice Bob
-./plurality Alice Bob
-make plurality
-make plurality
-./plurality Alice Bob
-make plurality
-./plurality Alice Bob
-make plurality
-./plurality Alice Bob
-make plurality
-./plurality Alice Bob
-make plurality
-make plurality
-./plurality Alice Bob
-make plurality
-./plurality Alice Bob
-make plurality
-2
-./plurality Alice Bob
-make plurality
-make plurality
-make plurality
-make plurality
-./plurality Alice Bob
-make plurality
-make plurality
-./plurality Alice Bob
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
 make plurality
 make plurality
 make plurality
@@ -570,4 +494,187 @@ make filter
 style50 helpers.c
 make filter
 style50 helpers.c
+cd
+git add .
+git commit -m 'filter pset 4'
+git push origin master
+cd pset4
+wget https://cdn.cs50.net/2019/fall/psets/4/recover/recover.zip
+unzip recover.zip
+rm recover.zip
+ls
+cd recover
+ls
+make recover
+./recover
+./recover 1 1 1 11 
+./recover 1 1 1 11 
+make recover
+make recover
+make recover
+./recover 1 1 1 11 
+./recover berend=berend
+make recover
+./recover berend=berend
+make recover
+make recover
+make recover
+./recover berend=berend
+./recover berend
+make recover
+./recover berend
+make recover
+make recover
+./recover
+./recover 22
+make recover
+./recover
+./recover 22
+./recover 22 22
+./recover card.raw
+make recover
+make recover
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+make recover
+make recover
+make recover
+./recover card.raw
+make recover
+./recuver card.raw
+./recover card.raw
+make recover
+make recover
+make recover
+./recover card.raw
+make recover
+make recover
+recover ./card.raw
+./recover card.raw
+./recover ./card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+make recover
+make recover
+recover card.raw
+./recover card.raw
+make recover
+make recover
+make recover
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+make recover
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+make recover
+make recover
+make recover
+make recover
+make recover
+make recover
+make recover
+make recover
+make recover
+make recover
+make recover
+make recover
+./recover card.raw
+make recover
+make recover
+./recover card.raw
+make recover
+make recover
+make recover
+./recover card.raw
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+clscls
+cls
+clear
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+r, -f *.jpg
+rm -f *.jpg
+clear
+make recover
+./recover card.raw
+rm -f *.jpg
+make recover
+make recover
+make recover
+make recover
+./recover card.raw
+check50 cs50/problems/2020/x/recover
+rm -f *.jpg
+make recover
+./recover card.raw
+rm -f -f
+fm -f *.jpg
+rm -f *.jpg
+make recover
+./recover c
+make recover
+./recover dd
+make recover
+./recover d
+make recover
+./recover d
+./recover card.raw
+./recover d
+make recover
+./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
 cd

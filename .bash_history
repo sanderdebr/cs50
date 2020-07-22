@@ -533,3 +533,5 @@ style50 recover.c
 submit50 cs50/problems/2020/x/recover
 cd
 git add . && commit -m "finished week4" && git push origin master
+git add . && git  commit -m "finished week4" && git push origin master
+?~Z*Y2f59NY6yKh4

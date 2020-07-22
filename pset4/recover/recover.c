@@ -12,7 +12,8 @@ char *generateName();
 int main(int argc, char *argv[])
 {
     // Check if one argument is given
-    if (argc != 2) {
+    if (argc != 2)
+    {
         printf("Correct usage: ./recover image.raw");
         return 1;
     }
@@ -26,37 +27,46 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    unsigned n;
-    sscanf("0xea", "%x", &n);
-    printf("%u\n BEREND", n);
-
-    return 1;
-
     // Allocate memory for one block
     unsigned char *buffer = malloc(BLOCK);
 
     // Asign output file
     FILE *output = NULL;
 
+    // Assign temp file name
+    char *tempname = NULL;
+
     // Loop over buffer blocks of 512
-    while(fread(buffer, BLOCK, 1, file) != 0)
+    while (fread(buffer, BLOCK, 1, file) != 0)
     {
-        // Check if JPG
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff)
+        // If start of new JPEG
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            // TODO: Check if fourth hexadecimal for JPEG is in range
-            if (1 == 1)
-                {
-                // Close output if not referring to a file
-                if (output != NULL)
-                {
-                    fclose(output);
-                }
+            // Close output if not yet refer to a file and END of JPEG
+            if (output != NULL)
+            {
+                fclose(output);
+            }
 
-                output = fopen(generateName(), "w");
+            // Open up new file with name
+            tempname = generateName();
 
+            output = fopen(tempname, "w");
+
+            if (output != NULL)
+            {
                 fwrite(buffer, BLOCK, 1, output);
             }
+        }
+        // Else if already found JPEG
+        else if (tempname != NULL)
+        {
+            fwrite(buffer, BLOCK, 1, output);
+        }
+        // Empty space
+        else
+        {
+            tempname = NULL;
         }
     }
 

@@ -5010,7 +5010,7 @@ function Worker(vfs) {
     this.on("drain", function () {
         Object.keys(streams).forEach(function (id) {
             var stream = streams[id];
-            if (stream.readable && stream.resume) stream.resume();
+            if (stream && stream.readable && stream.resume) stream.resume();
         });
         Object.keys(proxyStreams).forEach(function (id) {
             var stream = proxyStreams[id];
@@ -5307,6 +5307,12 @@ function Worker(vfs) {
 
     // Can be used for keepalive checks.
     function ping(callback) {
+        if (typeof callback !== "function") {
+            return console.error(
+                "[WORKER] [PING] Callback passed is not a function. Callback is: ",
+                callback
+            );
+        }
         callback();
     }
 

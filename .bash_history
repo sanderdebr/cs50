@@ -1,186 +1,3 @@
-make plurality
-make plurality
-make plurality
-make plurality
-./plurality Alice Bob
-./plurality Alice Bob Berend
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-make plurality
-make plurality
-make plurality
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-./plurality Alice Bob Berend
-./plurality Alice Bob Berend
-make plurality
-make plurality
-make plurality
-./plurality Alice Bob Berend
-make plurality
-make plurality
-make plurality
-make plurality
-make plurality
-./plurality Alice Bob Berend
-./plurality Alice Bob Berend
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-make plurality
-make plurality
-./plurality Alice Bob Berend
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Berend
-./plurality Alice Bob Berend
-make plurality
-./plurality Alice Bob Charlie
-check50 cs50/problems/2020/x/plurality
-style50 plurality.c
-style50 plurality.c
-make plurality
-style50 plurality.c
-check50 cs50/problems/2020/x/plurality
-style50 plurality.c
-style50 plurality.c
-submit50 cs50/problems/2020/x/plurality
-cd pset3/runoff
-wget https://cdn.cs50.net/2019/fall/psets/3/runoff/runoff.c
-make runoff
-./runoff
-./runoff Alice Bob Charlie
-make runoff
-make runoff
-make runoff
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-make runoff
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-make runoff
-cls
-clear
-clear
-make runoff
-make runoff
-make runoff
-make runoff
-clear
-make runoff
-make runoff
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-make runoff
-make runoff
-make runoff
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-make runoff
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-debug50 ./runoff Alice Bob Charlie
-debug50 ./runoff Alice Bob Charlie
-debug50 ./runoff Alice Bob Charlie
-make runoff
-debug50 ./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-make runoff
-./runoff Alice Bob Charlie
-make runoff
 ./runoff Alice Bob Charlie
 ./runoff Alice Bob Charlie
 ./runoff Alice Bob Charlie
@@ -678,3 +495,41 @@ make recover && ./recover card.raw
 make recover && ./recover card.raw
 make recover && ./recover card.raw
 cd
+git add .
+git commit -m "pset 4"
+git push origin master
+cd pset4/recover
+./recover card.raw
+make recover
+./recover card.raw
+make recover
+./recover card.raw
+rm -f *.jpg
+make recover && ./recover card.raw
+rm -f *.jpg
+make recover && ./recover card.raw
+rm -f *.jpg
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+cls
+clear
+make recover && ./recover card.raw
+make recover && ./recover card.raw
+rm -f *.jpg
+make recover && ./recover card.raw
+rm -f *.jpg
+make recover && ./recover card.raw
+rm -f *.jpg
+make recover && ./recover card.raw
+rm -f *.jpg
+make recover && ./recover card.raw
+style50 recover.c
+check50 cs50/problems/2020/x/recover
+style50 recover.c
+submit50 cs50/problems/2020/x/recover
+cd
+git add . && commit -m "finished week4" && git push origin master

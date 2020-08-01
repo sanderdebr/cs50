@@ -755,3 +755,5 @@ make speller
 ./speller dictionaries/small texts/cat.txt
 valgrind ./speller texts/cat.txt
 cd
+git add . && git commit -m "only issue with freeing memory" && git push origin master
+git pull origin master

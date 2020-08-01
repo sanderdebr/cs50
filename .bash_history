@@ -1,42 +1,3 @@
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-./runoff Alice Bob Charlie
-check50 cs50/problems/2020/x/runoff
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-./runoff Alice Bob Charlie
-make runoff
-check50 cs50/problems/2020/x/runoff
-make runoff
-debug50 ./runoff Alice Bob Charlie
-make runoff
-check50 cs50/problems/2020/x/runoff
-make runoff
-check50 cs50/problems/2020/x/runoff
-make runoff
-check50 cs50/problems/2020/x/runoff
-style50 runoff.c
-style50 runoff.c
-submit50 cs50/problems/2020/x/runoff
-cd
-git add .
-git remote -v
-git commit -m "week 3 finished"
-git push origin master
-cd
-mkdir pset4
-cd pset4
-wget https://cdn.cs50.net/2019/fall/psets/4/filter/less/filter.zip
-unzip filter.zip
-rm filter.zip
-ls
-cd filter
-ls
 cls
 clear
 make filter
@@ -536,3 +497,261 @@ git add . && commit -m "finished week4" && git push origin master
 git add . && git  commit -m "finished week4" && git push origin master
 ?~Z*Y2f59NY6yKh4
 git add . && git  commit -m "finished week4" && git push origin master
+git add . && git  commit -m "finished week4" && git push origin master
+mkdir pset5
+cd pset5
+wget https://cdn.cs50.net/2019/fall/psets/5/speller/speller.zip
+unzip speller.zip
+rm speller.zip
+ls
+cd speller
+ls
+make speller
+./speller text
+./speller dictionaries/small text
+./speller texts/lalaland.txt
+~cs50/2019/fall/pset5/speller texts/lalaland.txt
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+make speller
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+make speller
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+./speller dictionaries/small text
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+make speller
+./speller dictionaries/small text
+make speller
+make speller
+./speller dictionaries/small text
+./speller texts/lalaland.txt
+./speller dictionaries/small
+./speller texts/cat.txt
+./speller dictionaries/small text
+./speller dictionaries/small cat
+./speller dictionaries/small cat.txt
+./speller dictionaries/small texts/cat.txt
+make speller
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small text
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small text
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+make speller
+make speller
+make speller
+./speller dictionaries/small texts/cat.txt
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+clear
+make speller
+clear
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+./speller dictionaries/small texts/aca.txt
+./speller
+./speller dictionaries/large texts/aca.txt
+clear
+make speller
+./speller texts/lalaland.txt
+./speller texts/lalaland.txt
+./speller texts/lalaland.txt > student.txt
+~cs50/2019/fall/pset5/speller texts/lalaland.txt > staff.txt
+diff -y student.txt staff.txt
+valgrind ./speller texts/cat.txt
+check50 cs50/problems/2020/x/speller
+check50 cs50/problems/2020/x/speller
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+check50 cs50/problems/2020/x/speller
+check50 cs50/problems/2020/x/speller --log
+clear
+help50 valgrind ./speller texts/cat.txt
+make speller
+help50 valgrind ./speller texts/cat.txt
+check50 cs50/problems/2020/x/speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+check50 cs50/problems/2020/x/speller
+help50 valgrind ./speller texts/cat.txt
+make speller
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+valgrind ./speller texts/cat.txt
+cd

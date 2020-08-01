@@ -15,3 +15,6 @@ My solutions to Harvard's Introduction to Computer Science Course problem set.
 
 **Week 4**
 - Create a program in C such that a user can apply grayscale, sepia, reflection, or blur filters to their images.
+
+**Week 5**
+- Create a program in C that spell-checks a file, using a hash table, as efficiently as possible.

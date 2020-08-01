@@ -1,264 +1,3 @@
-cls
-clear
-make filter
-./filter -g images/yard.bmp out.bmp
-make filter
-make filter
-cd pset4
-make filter
-cd filter
-make filter
-cls
-clear
-make filter
-./filter -g images/yard.bmp out.bmp
-debug50 filter
-debug50 ./filter -g images/yard.bmp out.bmp
-debug50 ./filter -g images/yard.bmp out.bmp
-debug50 ./filter -g images/yard.bmp out.bmp
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-make filter
-clear
-make filter
-make filter
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-make filter
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-./filter -g images/yard.bmp out.bmp
-git add .
-cd
-git add .
-git commit -m "filter grayscale"
-git push origin master
-git push origin master
-exit
-cd pset4/filter
-make filter
- ./filter -g images/yard.bmp out.bmp
- ./filter -s images/yard.bmp out.bmp
-make filter
- ./filter -s images/yard.bmp out.bmp
-make filter
- ./filter -r images/yard.bmp out.bmp
-debug50  ./filter -r images/yard.bmp out.bmp
-make filter
-debug50  ./filter -r images/yard.bmp out.bmp
-make filter
-make filter
-debug50  ./filter -r images/yard.bmp out.bmp
-make filter
- ./filter -r images/yard.bmp out.bmp
-make filter
- ./filter -r images/yard.bmp out.bmp
-make filter
- ./filter -r images/yard.bmp out.bmp
-make filter
- ./filter -r images/yard.bmp out.bmp
-make filter
-debug50  ./filter -r images/yard.bmp out.bmp
-make filter
- ./filter -r images/yard.bmp out.bmp
-make filter
- ./filter -r images/yard.bmp out.bmp
-make filter
- ./filter -r images/yard.bmp out.bmp
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-make filter
-debug50  ./filter -r images/yard.bmp out.bmp
-debug50  ./filter -b images/yard.bmp out.bmp
-debug50  ./filter -b images/yard.bmp out.bmp
-debug50  ./filter -b images/yard.bmp out.bmp
-make filter
-debug50  ./filter -b images/yard.bmp out.bmp
-git add .
-cd
-git add 
-git add .
-git commit -m "add all"
-git push origin master
-make filter
-cd pset4/filter
-make filter
-debug50  ./filter -b images/yard.bmp out.bmp
-make filter
-debug50  ./filter -b images/yard.bmp out.bmp
-make filter
-make filter
-debug50  ./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-debug50 ./filter -b images/yard.bmp out.bmp
-make filter
-debug50 ./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-make filter
-make filter
-./filter -b images/yard.bmp out.bmp
-check50 cs50/problems/2020/x/filter/less
-make filter
-make filter
-make filter
-check50 cs50/problems/2020/x/filter/less
-make filter
-check50 cs50/problems/2020/x/filter/less
-make filter
-check50 cs50/problems/2020/x/filter/less
- filters single pixel with whole number average
-:( grayscale correctly filters single pixel without whole number average
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-make filter
-check50 cs50/problems/2020/x/filter/less
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-make filter
-make filter
-debug50 ./filter -g images/yard.bmp out.bmp
-make filter
-check50 cs50/problems/2020/x/filter/less
-make filter
-check50 cs50/problems/2020/x/filter/less
-make filter
-check50 cs50/problems/2020/x/filter/less
-make filter
-check50 cs50/problems/2020/x/filter/less
-make filter
-./filter -r infile.bmp outfile.bmp
-./filter -r ./images/stadium.bmp out.bmp
-make filter
-./filter -r ./images/stadium.bmp out.bmp
-check50 cs50/problems/2020/x/filter/less
-make filter
-./filter -r ./images/stadium.bmp out.bmp
-make filter
-make filter
-make filter
-./filter -r ./images/stadium.bmp out.bmp
-make filter
-./filter -r ./images/stadium.bmp out.bmp
-make filter
-cd
-git add .
-git commit -m "stuck on reflection"
-git push origin master
-cd pset4/filter
-make filter
-./filter -rg images/yard.bmp out.bmp
-./filter -r images/yard.bmp out.bmp
-./filter -rg images/yard.bmp out.bmp
-make filter
-./filter -r images/yard.bmp out.bmp
-check50 cs50/problems/2020/x/filter/less
-check50 cs50/problems/2020/x/filter/less
-make filter
-make filter
-./filter -b images/yard.bmp out.bmp
-check50 cs50/problems/2020/x/filter/less
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-debug50 ./filter -b images/yard.bmp out.bmp
-debug50 ./filter -b images/yard.bmp out.bmp
-debug50 ./filter -b images/yard.bmp out.bmp
-debug50 ./filter -b images/yard.bmp out.bmp
-debug50 ./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-./filter -b images/yard.bmp out.bmp
-make filter
-debug50 ./filter -b images/yard.bmp out.bmp
-debug50 ./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-check50 cs50/problems/2020/x/filter/less
-make filter
-./filter -b images/yard.bmp out.bmp
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-make filter
-./filter -b images/yard.bmp out.bmp
-check50 cs50/problems/2020/x/filter/less
-make filter
-./filter -b images/yard.bmp out.bmp
-check50 cs50/problems/2020/x/filter/less
-make filter
-check50 cs50/problems/2020/x/filter/less
-make filter
-check50 cs50/problems/2020/x/filter/less
 make filter
 check50 cs50/problems/2020/x/filter/less
 make filter
@@ -758,3 +497,79 @@ cd
 git add . && git commit -m "only issue with freeing memory" && git push origin master
 git pull origin master
 git add . && git commit -m "only issue with freeing memory" && git push origin master
+git add . && git commit -m "only issue with freeing memory" && git push origin master
+cd pset5
+cd speller
+make speller
+valgrind ./speller texts/cat.txt
+valgrind ./speller texts/cat.txt
+make speller
+valgrind ./speller texts/cat.txt
+./speller texts/lalaland.txt
+./speller texts/lalaland.txt > student.txt
+~cs50/2019/fall/pset5/speller texts/lalaland.txt > staff.txt
+diff -y student.txt staff.txt
+valgrind ./speller dictionaries/small  texts/cat.txt
+make speller
+make speller
+make speller
+valgrind ./speller dictionaries/small  texts/cat.txt
+./speller dictonaries/small texts/cat
+./speller dictionaries/small texts/cat
+./speller dictionaries/small texts/cat.txt
+./speller dictionaries/small texts/cat
+make speller
+./speller dictionaries/small texts/cat
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+make speller
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+make speller
+make speller
+make speller
+./speller dictionaries/small texts/cat.txt
+make speller
+./speller dictionaries/small texts/cat.txt
+ valgrind ./speller texts/cat.txt
+make speller
+ valgrind ./speller texts/cat.txt
+make speller
+ valgrind ./speller texts/cat.txt
+make speller
+ valgrind ./speller texts/cat.txt
+check50 cs50/problems/2020/x/speller
+make speller
+check50 cs50/problems/2020/x/speller
+make speller
+check50 cs50/problems/2020/x/speller
+make speller
+check50 cs50/problems/2020/x/speller
+make speller
+check50 cs50/problems/2020/x/speller
+make speller
+check50 cs50/problems/2020/x/speller
+make speller
+check50 cs50/problems/2020/x/speller
+~cs50/2019/fall/pset5/speller texts/lalaland.txt
+./speller texts/lalaland.txt > student.txt
+~cs50/2019/fall/pset5/speller texts/lalaland.txt > staff.txt
+diff -y student.txt staff.txt
+check50 cs50/problems/2020/x/speller
+submit50 cs50/problems/2020/x/speller
+cd

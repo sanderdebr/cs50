@@ -148,7 +148,7 @@ bool load(const char *dictionary)
        }
 
        // Store the node value with the word
-       strcpy(n->word, word);
+       strncpy(n->word, word, sizeof(word));
        // Set next pointing to nothing
        n->next = NULL;
        // Get index of hash
@@ -158,13 +158,7 @@ bool load(const char *dictionary)
         wordCount++;
 
        // Set new node next pointer to first element of linked list
-       if (table[index] != NULL)
-       {
-           n->next = table[index];
-       } else
-       {
-           n->next = NULL;
-       }
+       n->next = table[index];
        // Reset head to point to the new node
        table[index] = n;
 
@@ -174,6 +168,8 @@ bool load(const char *dictionary)
            printf("Word: %s\n", tmp->word);
        } */
     }
+
+    fclose(file);
 
     loaded = true;
 
@@ -198,16 +194,30 @@ bool unload(void)
     // Call free on any memory used with malloc
     // Return true when finished
 
+    unsigned int cleared = 0;
+
     // 1. Loop array of linked lists
     for (int i = 0; i < N; i ++)
     {
-        for (node *ptr = table[i]; ptr != NULL; ptr = ptr->next)
+        node *cursor = table[i];
+
+        while (cursor != NULL)
         {
-            free(ptr);
+            node *tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+
+            cleared++;
         }
     }
 
-    return true;
+    if (cleared == size())
+    {
+        // printf("Cleared all tables\n");
+        return true;
+    }
+
+    return false;
 
     // 2. Call free each one of those nodes
     // 3. Create cursor and tmp pointer and point to same node

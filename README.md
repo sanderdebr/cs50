@@ -1,6 +1,8 @@
 # CS50
 My solutions to Harvard's Introduction to Computer Science Course problem set.
 
+<hr/>
+
 **Week 1**
 - Create a program in C to build pyramids made of hashes.
 - Create a program in C to determine if a creditcard number is valid by using Luhn's algortithm.

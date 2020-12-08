@@ -23,3 +23,6 @@ My solutions to Harvard's Introduction to Computer Science Course problem set.
 
 **[Week 7 - SQL - view solution](https://github.com/sanderdebr/CS50/tree/master/pset7/)**
 - Implement a program in Python to import student data into a database, and then produce class rosters.
+
+**[Week 8 - Web track - view solution](https://github.com/sanderdebr/CS50/tree/master/finance/)**
+- Implement a website via which users can “buy” and “sell” stocks.

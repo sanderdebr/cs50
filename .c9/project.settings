@@ -8,7 +8,7 @@
         },
         "simple": {
             "settings": {
-                "@revision": 6
+                "@revision": 7
             }
         }
     },
@@ -35,7 +35,8 @@
         "@currentconfig": ""
     },
     "python": {
-        "@path": "/usr/local/lib/python3.7/site-packages"
+        "@path": "/usr/local/lib/python3.7/site-packages",
+        "@pylintFlags": "-d all -e E -e F -d E1101"
     },
     "run": {
         "configs": {

@@ -1,0 +1,32 @@
+h1 {
+    color: blue;
+}
+
+html {
+    width: 100%;
+}
+
+#mySelect {
+    color: green;
+}
+
+.form-group {
+    display: flex;
+}
+
+h1 > h2 {
+    font-size: 200%;
+}
+
+div .span {
+    font-size: 300%;
+}
+
+div > p {
+    color: green;
+}
+
+a::hover {
+    color: green;
+}
+

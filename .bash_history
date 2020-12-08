@@ -503,3 +503,5 @@ unzip finance.zip && rm finance.zip && cd finance && ls
 export API_KEY=pk_7e4862264be24e79b41151603f53fb5c
 flask run
 cd ..
+git add . && git commit -m "working on finance" && git push origin master
+mk .gitignore

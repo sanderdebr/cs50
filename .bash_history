@@ -519,3 +519,5 @@ lask run
 lask run
 flask run
 cd ..
+git add . && git commit -m "finance" && git push origin master
+git pull origin master

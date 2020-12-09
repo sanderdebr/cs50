@@ -1,11 +1,3 @@
-python dna.py ./databases/small.csv
-python dna.py ./databases/small.csv
-python dna.py ./databases/small.csv
-python dna.py ./databases/small.csv
-python dna.py ./databases/small.csv
-python dna.py ./databases/small.csv
-python dna.py ./databases/small.csv
-python dna.py ./databases/small.csv ./sequences/5.txt
 python dna.py ./databases/small.csv ./sequences/5.txt
 python dna.py ./databases/small.csv ./sequences/5.txt
 python dna.py ./databases/small.csv ./sequences/5.txt
@@ -505,3 +497,25 @@ flask run
 cd ..
 git add . && git commit -m "working on finance" && git push origin master
 mk .gitignore
+git add . && git commit -m "working on finance" && git push origin master
+cd finance
+flask run
+export API_KEY=pk_7e4862264be24e79b41151603f53fb5c
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+lask run
+lask run
+flask run
+cd ..

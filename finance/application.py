@@ -1,4 +1,5 @@
 import os
+import logging
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -44,14 +45,75 @@ if not os.environ.get("API_KEY"):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+    # Get all shares of user
+    rows = db.execute("SELECT * FROM shares WHERE userId = :id", id=session["user_id"])
+
+    shares = []
+    for row in rows:
+        logging.info(row)
+        symbolInfo = lookup(row["symbol"])
+        # Calculate total
+        total = symbolInfo["price"] * row["shares"]
+        total = format(total, '.2f')
+        total = int(float(total))
+        share = {
+            "symbol": row["symbol"],
+            "shares": row["shares"],
+            "name": symbolInfo["name"],
+            "price": symbolInfo["price"],
+            "total": total
+        }
+        shares.append(share)
+
+    # Calculate user's cash
+    rows = db.execute("SELECT cash FROM users WHERE id = :id", id=session["user_id"])
+    cash = rows[0]["cash"]
+
+    # Calculate total
+    total = 0
+    for share in shares:
+        total += share["total"]
+    total += cash
+
+    return render_template("index.html", shares=shares, cash=cash, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = int(request.form.get("shares"))
+        symbolInfo = lookup(symbol)
+
+        # Check if symbol exists
+        if (symbolInfo is None):
+            return apology("Invalid symbol")
+
+        # Check if shares is positive number
+        if shares < 0:  # if not a positive int print message and ask for input again
+            return apology("Shares is not a valid number")
+
+        rows = db.execute("SELECT cash FROM users WHERE id = :id", id=session["user_id"])
+        cash = rows[0]["cash"]
+
+        totalCosts = symbolInfo["price"] * shares;
+        newCash = cash - totalCosts
+
+        if (totalCosts > cash):
+            return apology("Not enough cash")
+
+        db.execute("CREATE TABLE IF NOT EXISTS 'shares' (id INTEGER PRIMARY KEY NOT NULL, userId INTEGER NOT NULL, symbol TEXT NOT NULL, shares INTEGER NOT NULL)")
+
+        db.execute("INSERT INTO shares (userId, symbol, shares) VALUES(:userId,:symbol,:shares)", userId=session["user_id"], symbol=symbol, shares=shares)
+
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", newCash, session["user_id"])
+
+        return redirect("/")
+
+    else:
+        return render_template("buy.html");
 
 
 @app.route("/history")
@@ -112,8 +174,17 @@ def logout():
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
 def quote():
-    """Get stock quote."""
-    return apology("TODO")
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        symbolInfo = lookup(symbol)
+        if (symbolInfo):
+            session["symbol"] = symbolInfo
+            return render_template("quoted.html")
+        else:
+            return apology("Invalid symbol")
+
+    else:
+        return render_template("quote.html");
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -139,13 +210,11 @@ def register():
             return apology("both passwords must be the same", 403)
 
         # Add user to the database
-        rows = db.execute("INSERT INTO users (username, hash) VALUES(:username,:password)",
+        id = db.execute("INSERT INTO users (username, hash) VALUES(:username,:password)",
                             username=request.form.get("username"), password=generate_password_hash(request.form.get("password")))
 
-        app.logger.info(rows)
-
         # Add user id to session
-        session["user_id"] = rows["id"]
+        session["user_id"] = id
 
         # Redirect user to home page
         return redirect("/")

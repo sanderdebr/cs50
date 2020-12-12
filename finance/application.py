@@ -75,6 +75,9 @@ def index():
         total += share["total"]
     total += cash
 
+    cash = int(float(cash))
+    total = int(float(total))
+
     return render_template("index.html", shares=shares, cash=cash, total=total)
 
 
@@ -84,6 +87,7 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol")
+        symbol = symbol.upper()
         shares = int(request.form.get("shares"))
         symbolInfo = lookup(symbol)
 
@@ -106,7 +110,13 @@ def buy():
 
         db.execute("CREATE TABLE IF NOT EXISTS 'shares' (id INTEGER PRIMARY KEY NOT NULL, userId INTEGER NOT NULL, symbol TEXT NOT NULL, shares INTEGER NOT NULL)")
 
-        db.execute("INSERT INTO shares (userId, symbol, shares) VALUES(:userId,:symbol,:shares)", userId=session["user_id"], symbol=symbol, shares=shares)
+        existingShares = db.execute("SELECT * from shares WHERE userId = ? AND symbol = ?", session["user_id"], symbol)
+
+        if not existingShares:
+            db.execute("INSERT INTO shares (userId, symbol, shares) VALUES(:userId,:symbol,:shares)", userId=session["user_id"], symbol=symbol, shares=shares)
+        else:
+            new_shares = existingShares[0]["shares"] + shares
+            db.execute("UPDATE shares SET shares = ? WHERE symbol = ? AND userId = ?", new_shares, symbol, session["user_id"])
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCash, session["user_id"])
 
@@ -120,7 +130,11 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    db.execute("CREATE TABLE IF NOT EXISTS 'history' (id INTEGER PRIMARY KEY NOT NULL, userId INTEGER NOT NULL, symbol TEXT NOT NULL, shares INTEGER NOT NULL, price FLOAT NOT NULL, date TIMESTAMP DEFAULT CURRENT_TIMESTAMP)")
+
+    rows = db.execute("SELECT * from history WHERE userId = ?", session["user_id"])
+
+    return render_template("history.html", history=rows);
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -227,8 +241,45 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = int(request.form.get("shares"))
+        symbolInfo = lookup(symbol)
 
+        # Check if symbol exists
+        if (symbolInfo is None):
+            return apology("Invalid symbol")
+
+        # Check if shares is positive number
+        if shares < 0:  # if not a positive int print message and ask for input again
+            return apology("Shares is not a valid number")
+
+        rows = db.execute("SELECT * FROM shares WHERE symbol = ? AND userId = ?", symbol, session["user_id"])
+        shares_owned = rows[0]["shares"]
+
+        if (shares_owned < shares):
+            return apology("Not enough shares")
+
+        # Update shares
+        new_shares = shares_owned - shares
+        db.execute("UPDATE shares SET shares = ? WHERE symbol = ? AND userId = ?", new_shares, symbol, session["user_id"])
+
+        # Update cash
+        rows = db.execute("SELECT cash FROM users WHERE id = :id", id=session["user_id"])
+        cash = rows[0]["cash"]
+
+        total_cost = symbolInfo["price"] * shares;
+        new_cash = cash - total_cost
+
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
+
+        return redirect("/")
+
+    else:
+        # Get users shares
+        rows = db.execute("SELECT symbol FROM shares WHERE userId = ?", session["user_id"])
+
+        return render_template("sell.html", shares=rows);
 
 def errorhandler(e):
     """Handle error"""

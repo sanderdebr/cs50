@@ -25,4 +25,4 @@ My solutions to Harvard's Introduction to Computer Science Course problem set.
 - Implement a program in Python to import student data into a database, and then produce class rosters.
 
 **[Week 8 - Web track - view solution](https://github.com/sanderdebr/CS50/tree/master/finance/)**
-- Implement a website via which users can “buy” and “sell” stocks.
+- Create a web app with Python and Flask via which users can “buy” and “sell” stocks by querying IEX for stocks' prices.

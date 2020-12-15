@@ -118,6 +118,9 @@ def buy():
             new_shares = existingShares[0]["shares"] + shares
             db.execute("UPDATE shares SET shares = ? WHERE symbol = ? AND userId = ?", new_shares, symbol, session["user_id"])
 
+        price = int(float(symbolInfo["price"]))
+        db.execute("INSERT INTO history (userId, symbol, shares, price) VALUES(?,?,?,?)", session["user_id"], symbol, shares, price)
+
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCash, session["user_id"])
 
         return redirect("/")
@@ -184,6 +187,22 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
+@app.route("/change-password", methods=["GET", "POST"])
+@login_required
+def change_password():
+    """Change users password"""
+    if request.method == "POST":
+        pass_input = request.form.get("password")
+        if (len(pass_input) >= 8):
+            new_pass = generate_password_hash(pass_input)
+            db.execute("UPDATE users SET hash = ? WHERE id = ?", new_pass, session["user_id"])
+            return render_template("/index.html", alert="Password succesfully reset!")
+        else:
+            return apology("At least 8 chars")
+
+    else:
+        # Redirect user to login form
+        return render_template("change-password.html")
 
 @app.route("/quote", methods=["GET", "POST"])
 @login_required

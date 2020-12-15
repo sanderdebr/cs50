@@ -5,6 +5,11 @@
 {% endblock %}
 
 {% block main %}
+    {% if alert is defined %}
+    <div class="alert alert-primary" role="alert">
+      {{ alert }}
+    </div>
+    {% endif %}
     <main class="container p-5">
         <table class="table table-striped">
             <thead>

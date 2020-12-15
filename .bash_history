@@ -62,47 +62,6 @@ python dna.py ./databases/small.csv ./sequences/5.txt
 python dna.py ./databases/small.csv ./sequences/5.txt
 python dna.py ./databases/small.csv ./sequences/5.txt
 python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
-python dna.py ./databases/small.csv ./sequences/5.txt
 python dna.py ./databases/small.csv ./sequences/7.txt
 python dna.py ./databases/small.csv ./sequences/20.txt
 python dna.py ./databases/small.csv ./sequences/1.txt
@@ -521,3 +480,36 @@ flask run
 cd ..
 git add . && git commit -m "finance" && git push origin master
 git pull origin master
+git add . && git commit -m "finance" && git push origin master
+flask run
+flask run
+c cd finance
+cd finance
+flask run
+flask run
+export API_KEY=pk_7e4862264be24e79b41151603f53fb5c
+flask run
+flask run
+flask run
+flask run
+flask run
+git add .
+git commit -m "made sell and history: 
+"
+git push origiin master
+git push origin master
+cd finance
+export API_KEY=pk_7e4862264be24e79b41151603f53fb5c
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+flask run
+submit50 cs50/problems/2020/x/tracks/web/finance
+git add . && git commit -m "finished finance!" && git push origin master
+git add . && git commit -m "finished finance!" && git push origin master
+git add . && git commit -m "finished finance!" && git push origin master
+cd ..
